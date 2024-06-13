@@ -43,5 +43,33 @@
 }
 li{
  list-style-type: none;
+ 
 }
 
+img{
+ width: 10rem;
+}
+
+.container{
+
+  width: 50%;
+  margin: 1rem auto;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background-image: linear-gradient(to right, #2d3338, #f0f0f0);
+  
+}
+
+.button{
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 1000px;
+}
