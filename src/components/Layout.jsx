@@ -13,6 +13,7 @@ function Layout() {
   return (
     <>
     <h1>Welcome to our shop</h1>
+    
       <ul>
         <li>
           <NavLink to="/"><FaHome className="icon"/></NavLink>
@@ -24,6 +25,7 @@ function Layout() {
 </NavLink>
         </li>
       </ul>
+      
       <main><Outlet /></main>
     </>
     

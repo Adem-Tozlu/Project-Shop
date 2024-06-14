@@ -11,25 +11,25 @@ function Home() {
 
   return (
     <>
+    <div className="container1">
+    
       {products && products.map((product) => {
-        const { depth, height, width } = product.dimensions || {};
+        
         return (
-         
+          
           <div key={product.id} className='container'>
-            {product.images.map((image, index) => {
-              return <img key={index} src={image} alt={image.alt || 'Product Image'} />
-            })}
+            <div className='bild-container'><img src="../public/images/Apple AirPods Max Silver
+.jpg" alt="Apple AirPods Max Silver" /></div>
+            <div>
             <h1>{product.title}</h1>
-            <p>{product.description}</p>
+            <article>{product.description}</article>
             <p>${product.price}</p>
-            <p>Depth: {depth}</p>
-            <p>Height: {height}</p>
-            <p>Width: {width}</p>
             <button className='button' onClick={() => addProduct(product)} >Add to Cart</button>
-          </div>
+          </div></div>
           
         )
       })}
+      </div>
     </>
   );
 }
