@@ -4,6 +4,8 @@ import { useContext} from 'react'
 
 
 
+
+
 function Home() {
   const { products, addProduct  } = useContext(FetchAPIContext)
 
@@ -12,6 +14,7 @@ function Home() {
       {products && products.map((product) => {
         const { depth, height, width } = product.dimensions || {};
         return (
+         
           <div key={product.id} className='container'>
             {product.images.map((image, index) => {
               return <img key={index} src={image} alt={image.alt || 'Product Image'} />
@@ -24,6 +27,7 @@ function Home() {
             <p>Width: {width}</p>
             <button className='button' onClick={() => addProduct(product)} >Add to Cart</button>
           </div>
+          
         )
       })}
     </>

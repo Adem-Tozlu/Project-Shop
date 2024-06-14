@@ -7,6 +7,11 @@ function FetchAPI({ children }) {
 
   const [products, setProducts] = useState([])
   const [cart, setCart] = useState([])
+  let numItem =  cart.length
+
+
+
+  
 
 
   useEffect(() => {
@@ -31,9 +36,14 @@ if (indexToRemove !== -1) {
     const updateProducts = [...cart.slice(0, indexToRemove), ...cart.slice(indexToRemove + 1)];
     setCart(updateProducts);
   }};
+
+  const itemTotal = () => {
+    return cart.reduce((total, item) => total + item.price, 0);
+    
+  }
   return (
 
-    <FetchAPIContext.Provider value={{ products, cart, addProduct, removeProduct }}>
+    <FetchAPIContext.Provider value={{ products, cart, numItem,addProduct, removeProduct,itemTotal }}>
       {children}
     </FetchAPIContext.Provider>
 
