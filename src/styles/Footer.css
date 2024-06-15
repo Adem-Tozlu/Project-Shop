@@ -1,0 +1,119 @@
+:root{
+    --color-dark-blue:#212529;
+    --color-grey:#AAAAB3;
+    --color-red-orange:#A7727d;
+
+}
+
+.footer{
+    font-family: "Cabin", sans-serif;
+    margin-top: 2rem;
+    margin-bottom: 0;
+  background-color:var(--color-dark-blue) ;
+  color: var(--color-grey);
+  width: 100%;
+  height: 35rem;
+  box-sizing: border-box;
+    
+
+}
+
+
+.logo-bild{
+    margin-left: -3rem;
+ width: 22rem;
+ margin-top: 3rem ;
+}  
+.footer-container_1{
+    margin: 1rem;
+    margin-left: 3.2rem;
+}
+.footer-container_2,.footer-container_3{
+    
+    margin: 1.5rem;
+    margin-left: 3.2rem;
+}
+
+
+
+.facebook-icon{
+    display: inline-block;
+    margin-top: 1rem;
+    
+    padding-right: 1rem;
+  font-size: 1.2rem;
+    cursor: pointer;
+
+    
+}
+.instagram-icon{
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.land{
+    padding-left: 2rem;
+}
+
+.contacttext,.newlatesttext{
+    color:var(--color-red-orange);
+    margin-bottom: 1rem;
+}
+.footer-container_2 p{
+    margin: 0.5rem auto;
+}
+.form-email{
+    margin-top: 1rem;
+    height: 100%;
+    display: flex;
+    align-items: center; 
+}
+
+#email{
+    padding-left: 2rem;
+    border-style: none;
+    height: 3rem;
+    width: 80%;
+    background-color: var(--color-grey);
+}
+#email:focus{
+    outline: none;
+}
+
+.email{
+    border-style: none;
+    height: 3rem;
+    width: 3rem;
+    background-color: var(--color-red-orange);
+    cursor: pointer;
+}
+.email-icon{
+    font-size: 1.2rem;
+    color: var(--color-white);
+    
+}
+.contact-icons{
+    padding-right: 1rem;
+    color: var(--color-red-orange);
+}
+@media screen and (min-width: 1024px){
+    .footer{
+        width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
+    .logo-bild{
+       
+        margin-top: 0;
+    }
+    .footer-container_3{
+        margin-top: 0;
+        
+    }
+    .newlatesttext{
+        margin-top: -0.5rem;
+    }
+   
+}

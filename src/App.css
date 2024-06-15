@@ -1,15 +1,10 @@
-#root {
-  
 
-  
-  
- 
-}
 body{
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
   font-size: 10px;
+  background-color: #f2f6fa;
 }
 
 li{
@@ -40,9 +35,11 @@ img {
 .container{
  
   
-  margin: 0 auto;
+  margin:  auto;
  position: relative;
+ 
   max-width: 15rem;
+  width: 50%;
   height: 20rem;
   margin: 1rem auto;
   border: 1px solid #ccc;
@@ -90,37 +87,30 @@ img {
   display: inline-block; 
 }
 
-.numItemWrapper {
-  position: absolute;
-  top: 0; 
-  right: 0; 
-  transform: translate(50%, -50%); 
-  background-color: red; 
-  border-radius: 50%; 
-  padding: 2px 4px; 
-  font-size: 0.7rem;
-  font-weight: bold;
-  color: white; }
 
-  .icon{
-    width: 1.5rem;
-    height: 1.5rem; 
+  a{
+    text-decoration: none;
+    font-size: 20px;
   }
-
-
-  ul{
-    position:;
-    display: flex;
-    justify-content: space-around;
-  }
+  
   .container1{
     display: flex;
     justify-content: center;
-    width: 100%;
-    margin: 0 auto;
+    width: 50%;
+    margin:  auto;
     flex:0 0 auto;
     flex-wrap: wrap;
+    position: relative;
 
    
   }
+
+ ul{
+   margin: 0 auto;
+    padding: 0;
+   
+    
+    
+ }
+
  

@@ -1,34 +1,54 @@
 import React from "react";
-import { NavLink,Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { FetchAPIContext } from '../context/FetchAPI'
-import { useContext} from 'react'
+import { useContext, useState } from 'react'
 
 
 
 function Layout() {
   const { numItem } = useContext(FetchAPIContext)
+  const [show, setShow] = useState(false)
 
   return (
     <>
-    <h1>Welcome to our shop</h1>
-    
-      <ul>
-        <li>
-          <NavLink to="/"><FaHome className="icon"/></NavLink>
-        </li>
-        <li>
-        <NavLink to="/addlist" className="addlist">
-  <span className={numItem&&"numItemWrapper"}>{numItem ? numItem : ""}</span>
-  <MdOutlineShoppingCart className="icon" />
-</NavLink>
-        </li>
-      </ul>
       
+
+
+      <ul className="navigation">
+        <li>
+          <NavLink to="/"><FaHome className="navigation__icon" /></NavLink>
+        </li>
+        <li className="navigation__products">
+
+          <NavLink to="#" onClick={() => setShow(!show)}>Products</NavLink > <ul style={{ display: show ? "none" : "" }}><li>
+
+            <NavLink to="/samsung">Samsung</NavLink></li>
+            <li>
+              <NavLink to="/apple">Apple</NavLink></li>
+            <li>
+              <NavLink to="/vivo">Vivo</NavLink></li>
+            <li>
+
+              <NavLink to="/realme">Realme</NavLink></li>
+            <li>
+
+              <NavLink to="/oppo">Oppo</NavLink></li></ul>
+
+
+
+
+        </li>
+        <NavLink to="/addlist" className="navigation__addList">
+          <span className={numItem && "navigation__addList--numItem"}>{numItem ? numItem : ""}</span>
+          <MdOutlineShoppingCart className="navigation__icon" />
+        </NavLink>
+      </ul>
+
       <main><Outlet /></main>
     </>
-    
+
   );
 }
 

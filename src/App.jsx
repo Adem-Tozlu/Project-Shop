@@ -1,24 +1,37 @@
-import "./App.css";
-import { Routes, Route } from "react-router-dom";
-import AddList from "./pages/AddList";
-import Home from "./pages/Home";
-import Layout from "./components/Layout";
-import NotPages from "./pages/NotPages";
-import FetchAPI from "./context/FetchAPI";
 
+import "./App.css";
+import "./styles/complett/_index.scss";
+import "./styles/Footer.css";
+import { Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout";
+import FetchAPI from "./context/FetchAPI";
+import Footer from "./components/Footer";
+import Category from "./context/Category";
+import {Home, AddList, NotPages, Samsung, Apple, Realme, Vivo, Oppo } from "./pages";
 function App() {
   return (
     <>
     <FetchAPI>
+      <Category>
       <Routes>
+      
         <Route path="/" element={<Layout />}>
+        
           <Route index element={<Home />} />
+          <Route path="/samsung" element={<Samsung />} />
+          <Route path="/apple" element={<Apple />} />
+          <Route path="/realme" element={<Realme />} />
+          <Route path="/vivo" element={<Vivo />} />
+          <Route path="/oppo" element={<Oppo />} />
+
           <Route path="/addlist" element={<AddList />} />
         </Route>
         <Route path="*" element={<NotPages />} />
-        <Route path="/fetchapi" element={<FetchAPI />} />
+       
       </Routes>
+     </Category>
       </FetchAPI>
+      <Footer />
     </>
   );
 }
