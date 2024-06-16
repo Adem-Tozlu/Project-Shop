@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink, Outlet } from "react-router-dom";
-import { FaHome } from "react-icons/fa";
+import { FaHome,FaChevronRight,FaChevronUp } from "react-icons/fa";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { FetchAPIContext } from '../context/FetchAPI'
 import { useContext, useState } from 'react'
@@ -9,7 +9,7 @@ import { useContext, useState } from 'react'
 
 function Layout() {
   const { numItem } = useContext(FetchAPIContext)
-  const [show, setShow] = useState(false)
+  const [show, setShow] = useState(true)
 
   return (
     <>
@@ -22,7 +22,7 @@ function Layout() {
         </li>
         <li className="navigation__products">
 
-          <NavLink to="#" onClick={() => setShow(!show)}>Products</NavLink > <ul style={{ display: show ? "none" : "" }}><li>
+          <NavLink to="#" onClick={() => setShow(!show)}>Products{show?<FaChevronRight />:<FaChevronUp />}</NavLink > <ul style={{ display: show ? "none" : "" }}><li>
 
             <NavLink to="/samsung">Samsung</NavLink></li>
             <li>

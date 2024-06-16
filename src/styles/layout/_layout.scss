@@ -1,42 +1,39 @@
 @use "../abstracts/" as *;
 
-.navgation{
-    background-color: black;
-    display: flex;
-    justify-content: space-around;
-    position: absolute;
-    top: 1rem;
-    left: 0;
-    right: 0;
-    z-index: 1;
-   
+.navigation {
+  background-color: black;
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  right: 0;
+  z-index: 1;
+
+  &__products {
+    display: block;
   }
 
-    .navgation__products{
-       display: block;
-    }
-    .navigation__icon{
-        width: 1.5rem;
-        height: 1.5rem; 
-    }
+  &__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
 
-    .navigation__addList{
-        position: relativ; 
-  display: inline-block; 
-    }
-    .navigation__addList--numItem{
-        position: absolute;
-        top: 0; 
-        right: 0; 
-        transform: translate(50%, -50%); 
-        background-color: red; 
-        border-radius: 50%; 
-        padding: 2px 4px; 
-        font-size: 0.7rem;
-        font-weight: bold;
-        color: white;
-    }
+  &__addList {
+    position: relative;
+    display: inline-block;
 
-
-    
- 
+    &--numItem {
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(50%, -50%);
+      background-color: red;
+      border-radius: 50%;
+      padding: 2px 4px;
+      font-size: 0.7rem;
+      font-weight: bold;
+      color: white;
+    }
+  }
+}
