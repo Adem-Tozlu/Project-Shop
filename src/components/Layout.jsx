@@ -9,34 +9,37 @@ function Layout() {
   const { numItem } = useContext(FetchAPIContext);
   const [show, setShow] = useState(true);
 
+  
   const navtoggle=() => setShow(!show)
+  const closeNav = () => setShow(true);
   return (
     <>
+    <header>
       <ul className="navigation">
         <li>
           <NavLink to="/">
-            <FaHome className="navigation__icon" />
+            <FaHome onClick={closeNav} className="navigation__icon" />
           </NavLink>
         </li>
         <li className="navigation__products">
-          <NavLink to="#" onClick={navtoggle}>
+          <NavLink to="#" onClick={navtoggle} >
             Products{show ? <FaChevronRight /> : <FaChevronUp />}
           </NavLink>{" "}
-          <ul className="product" style={{ display: show ? "none" : "" }}>
+          <ul className="navigation__product__text" style={{ display: show ? "none" : "" }}>
             <li>
-              <NavLink to="/samsung">Samsung</NavLink>
+              <NavLink to="/samsung" className="navigation__product">Samsung</NavLink>
             </li>
             <li>
-              <NavLink to="/apple">Apple</NavLink>
+              <NavLink to="/apple" className="navigation__product">Apple</NavLink>
             </li>
             <li>
-              <NavLink to="/vivo">Vivo</NavLink>
+              <NavLink to="/vivo" className="navigation__product">Vivo</NavLink>
             </li>
             <li>
-              <NavLink to="/realme">Realme</NavLink>
+              <NavLink to="/realme" className="navigation__product">Realme</NavLink>
             </li>
             <li>
-              <NavLink to="/oppo">Oppo</NavLink>
+              <NavLink to="/oppo" className="navigation__product">Oppo</NavLink>
             </li>
           </ul>
         </li>
@@ -44,11 +47,12 @@ function Layout() {
           <span className={numItem && "navigation__addList--numItem"}>
             {numItem ? numItem : ""}
           </span>
-          <MdOutlineShoppingCart className="navigation__icon" />
+          <MdOutlineShoppingCart onClick={closeNav} className="navigation__icon" />
         </NavLink>
       </ul>
+      </header>
 
-      <main onClick={()=>setShow(true)}> 
+      <main onClick={closeNav}> 
         <Outlet />
       </main>
     </>

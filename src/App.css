@@ -1,11 +1,5 @@
 
-body{
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-  font-size: 10px;
-  background-color: #f2f6fa;
-}
+
 
 li{
   display:flex;
@@ -15,6 +9,7 @@ li{
 
  
 }
+
 
 img {
   border-radius: 15px;
@@ -28,7 +23,7 @@ img {
   justify-content: center;
   margin: 0 auto;
   width: 100%;
-  height: 10rem;
+  height: auto;
   flex-wrap: wrap;
   box-sizing:border-box;}
 
@@ -38,13 +33,12 @@ img {
   margin:  auto;
  position: relative;
  
-  max-width: 15rem;
-  width: 50%;
-  height: 20rem;
-  margin: 1rem auto;
+  width: 20rem;
+  height: 28rem;
+  margin: 1rem ;
   border: 1px solid #ccc;
   border-radius: 20px;
-  background-image: linear-gradient(to right, #2d3338, #f0f0f0);
+background-color: white;
   
 }
 
@@ -74,12 +68,19 @@ img {
   color: white;
   padding: 15px 25px;
   text-decoration: none;
-  display: inline-block;
+  
   font-size: 10px;
   font-weight: bold;
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 1000px;
+
+}
+.block {
+  display: inline-block;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .addlist {
@@ -96,21 +97,23 @@ img {
   .container1{
     display: flex;
     justify-content: center;
-    width: 50%;
     margin:  auto;
-    flex:0 0 auto;
+    
     flex-wrap: wrap;
+    gap: 0.1rem;
     position: relative;
+   
 
    
   }
 
  ul{
-   margin: 0 auto;
-    padding: 0;
+   padding: 0;
+    margin:0  auto;
+  
    
     
     
  }
-
+ 
  

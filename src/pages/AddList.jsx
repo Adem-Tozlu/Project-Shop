@@ -13,7 +13,8 @@ function AddList() {
         cart.map((product) => {
           const { depth, height, width } = product.dimensions || {};
           return (
-            <>
+            
+            <main className="main">
               <div key={product.id} className="container">
               <div className='bild-container'><img src="../public/images/Apple AirPods Max Silver
 .jpg" alt="Apple AirPods Max Silver" /></div>
@@ -27,21 +28,25 @@ function AddList() {
                   Remove
                 </button>
               </div>
+              
+              </main>
             
-            </>
             
           );
           
         })}
          {cart.length > 0 ? (
-  <div>
+  <div className="block" >
     <p>Total: ${itemTotal()}</p>
     <button className="button--buy">Buy</button>
   </div>
+  
 ) : (
   <>
+  <main className="main">
   <div> <MdOutlineShoppingCart className="icon" /></div>
   <p>Your shopping cart is empty. Shop now!</p>
+  </main>
   </>
 )}
          
