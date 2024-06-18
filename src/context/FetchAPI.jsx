@@ -31,8 +31,9 @@ function FetchAPI({ children }) {
   const removeProduct = (product) => {
     const indexToRemove = cart.findIndex((item) => item.id === product.id);
     if (indexToRemove !== -1) {
-      cart.splice(indexToRemove, 1);
-      setCart([...cart]);
+    const newCart =[...cart.slice(0, indexToRemove),
+            ...cart.slice(indexToRemove + 1)]
+      setCart(newCart);
     }
   };
 
