@@ -20,7 +20,7 @@ function Home() {
           <div key={product.id} className='container'>
             <div className='bild-container'><img src="../public/images/Apple AirPods Max Silver
 .jpg" alt="Apple AirPods Max Silver" /></div>
-            <div>
+            <div className='addList__text'> 
             <h1>{product.title}</h1>
             <article>{product.description}</article>
             <p>${product.price}</p>

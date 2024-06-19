@@ -22,7 +22,7 @@ function FetchAPI({ children }) {
       });
 
   }, []);
-  console.log(products.map((product) => product.brand));
+
 
   const addProduct = (product) => {
     setCart([...cart, product])

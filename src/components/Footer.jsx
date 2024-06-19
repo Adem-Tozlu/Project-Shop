@@ -30,26 +30,26 @@ function Footer() {
          
         </div>
         <div className="footer-container_2">
-          <h4 className="contacttext">CONTACT US</h4>
-          <p>
-            <i className="contact-icons">
-              <BsTelephone />
-             </i>
-             (+505) 733 6053
-          </p>
-          <p>
-            <i className="contact-icons">
-              <MdOutlineMail />
-            </i>
-            hayadmu@gmail.com
-          </p>
-          <p>
-            <i className="contact-icons">
-              <CiLocationOn />
-            </i>
-            1645 Cooks Mine Road, 87325 Tohatchi <p className="land">New Mexico</p>{" "}
-          </p>
-        </div>
+  <h4 className="contacttext">CONTACT US</h4>
+  <p>
+    <i className="contact-icons">
+      <BsTelephone />
+    </i>
+    (+505) 733 6053
+  </p>
+  <p>
+    <i className="contact-icons">
+      <MdOutlineMail />
+    </i>
+    hayadmu@gmail.com
+  </p>
+  <p>
+    <i className="contact-icons">
+      <CiLocationOn />
+    </i>
+    1645 Cooks Mine Road, 87325 Tohatchi <span className="land">New Mexico</span>
+  </p>
+</div>
         <div className="footer-container_3">
           <h4 className="newlatesttext">NEW LATEST</h4>
           <p>Get the latest updates and offers.</p>
