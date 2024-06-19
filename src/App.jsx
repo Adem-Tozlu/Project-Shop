@@ -7,7 +7,7 @@ import Layout from "./components/Layout";
 import FetchAPI from "./context/FetchAPI";
 import Footer from "./components/Footer";
 import Category from "./context/Category";
-import {Home, AddList, NotPages, Samsung, Apple, Realme, Vivo, Oppo } from "./pages";
+import {Home, AddList, NotPages, Samsung, Apple, Realme, Vivo, Oppo,Accessories } from "./pages";
 function App() {
   return (
     <>
@@ -23,6 +23,7 @@ function App() {
           <Route path="/realme" element={<Realme />} />
           <Route path="/vivo" element={<Vivo />} />
           <Route path="/oppo" element={<Oppo />} />
+          <Route path="/accessories" element={<Accessories />} />
 
           <Route path="/addlist" element={<AddList />} />
         </Route>

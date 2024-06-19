@@ -23,13 +23,14 @@ function Category({children}) {
  
     const samsung = products.filter((product) => product.brand === 'Samsung')
     
-    const apple = products.filter((product) => product.brand === 'Apple')
+    const apple = products.filter((product) => product.brand === 'Apple'&&product.category==="smartphones")
     const realme = products.filter((product) => product.brand === 'Realme')
     const vivo = products.filter((product) => product.brand === 'Vivo')
     const oppo = products.filter((product) => product.brand === 'Oppo')
+    const accessories = products.filter((product)=>product.category === "mobile-accessories")
     return (
 
-      <CategoryContext.Provider value={{samsung,apple,realme,vivo,oppo,getImages}}>
+      <CategoryContext.Provider value={{samsung,apple,realme,vivo,oppo,accessories,getImages}}>
         {children}
       </CategoryContext.Provider>
   

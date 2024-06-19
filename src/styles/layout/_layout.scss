@@ -2,12 +2,12 @@
 @use "../base/" as *;
 
 .navigation {
-  background-color: white;
+
   display: flex;
   
   justify-content: space-around;
   position: absolute;
-
+  color: white;
   left: 0;
   right: 0;
   bottom: 0;
@@ -16,12 +16,15 @@
   &__products {
     display: inline-block;
     color: white;
-    background-color: white;
+    
+    
     
   }
   &__product__text{
     height: 0.2rem;
     background-color: white;
+    
+    
     
     
 
@@ -32,10 +35,10 @@
     background-color: white;
     width: 100%;
     border: 1px solid black;
-    padding: 0.2rem 0;
-    border-radius: 0.5rem;
- 
-    
+    padding: 0.3rem 0.1rem;
+    font-size: 1rem;
+    color: black;
+   
   }
 
   &__icon {

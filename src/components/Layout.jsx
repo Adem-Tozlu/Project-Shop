@@ -13,7 +13,7 @@ function Layout() {
   const closeNav = () => setShow(true);
   return (
     <>
-      <header>
+      <header className="header">
         <ul className="navigation">
           <li>
             <NavLink to="/">
@@ -53,6 +53,12 @@ function Layout() {
                   Oppo
                 </NavLink>
               </li>
+              <li>
+                <NavLink to="/accessories" className="navigation__product">
+                  Accessories
+                </NavLink>
+              </li>
+
             </ul>
           </li>
           <NavLink to="/addlist" className="navigation__addList">

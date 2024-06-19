@@ -1,10 +1,14 @@
 import React from "react";
 import { FetchAPIContext } from "../context/FetchAPI";
+import { CategoryContext } from '../context/Category'
+
 import { useContext } from "react";
 import { MdOutlineShoppingCart } from "react-icons/md";
 
 function AddList() {
   const { cart, removeProduct, itemTotal } = useContext(FetchAPIContext);
+  const { getImages} = useContext(CategoryContext)
+
 
   return (
     <>
@@ -15,11 +19,7 @@ function AddList() {
             <main className="main">
               <div key={product.id} className="container">
                 <div className="bild-container">
-                  <img
-                    src="../public/images/Apple AirPods Max Silver
-.jpg"
-                    alt="Apple AirPods Max Silver"
-                  />
+                <img src={getImages(product)} alt={product.title}/>
                 </div>
                 <div className="addList__text">
                 <h1>{product.title}</h1>
