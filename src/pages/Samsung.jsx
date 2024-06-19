@@ -7,8 +7,9 @@ import { useContext} from 'react'
 
 
 
+
 function Samsung() {
-  const { samsung } = useContext(CategoryContext)
+  const { samsung,getImages} = useContext(CategoryContext)
     const { addProduct  } = useContext(FetchAPIContext)
 
   return (
@@ -20,7 +21,7 @@ function Samsung() {
         return (
           
           <div key={product.id} className='container'>
-            <div className='bild-container'><img src="../public/images/Samsung Galaxy S7.jpg" alt="Apple AirPods Max Silver" /></div>
+            <div className='bild-container'><img src={getImages(product)} alt={product.title}/></div>
             <div>
             <h1>{product.title}</h1>
             <article>{product.description}</article>
