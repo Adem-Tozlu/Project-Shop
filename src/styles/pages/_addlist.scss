@@ -1,0 +1,42 @@
+@use "../abstracts/" as *;
+
+.addlist{
+&__container{
+   @include container();
+  }
+  &__bild-container{
+   @include bild-container();
+   
+  }
+  &__img{
+  @include img();
+  }
+  &__text{
+
+
+  }
+
+  &__button{
+    @include button();
+  }
+  &__buy--total{
+    display: inline-block;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+  }
+  &__button--buy{
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 25px;
+  text-decoration: none;
+  
+  font-size: 10px;
+  font-weight: bold;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 1000px;
+  }
+  
+}

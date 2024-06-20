@@ -11,19 +11,29 @@ html {
 
 body {
     margin: 0 auto;
+  
     text-align: center;
     font-size: 10px;
     background-color: #2f5e8d;
 }
 header {
    height: 10rem;
-   width: 100%;
+   
+    font-size: 20px;
    
     position: relative;
-    background-image:url("./public/images/banner.jpg");
+    background-image:url("/images/banner.jpg");
+    & :hover{
+        color: #2f5e8d;
+   
+    }
+  
 }
 header a{
     color: white;
+    text-decoration: none;
+  
+   
 }
 main{
     margin:  auto;
@@ -35,3 +45,20 @@ main{
     margin: 0px auto;
     padding: 0 2rem;
   }
+  li{
+    display:flex;
+    justify-content: center;
+   list-style-type: none;
+   & :hover{
+    color: #2f5e8d;
+    background-color: black;
+}
+  
+  
+   
+  }
+  
+    a{
+     
+    }
+    

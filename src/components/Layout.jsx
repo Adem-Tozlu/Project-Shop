@@ -15,13 +15,13 @@ function Layout() {
     <>
       <header className="header">
         <ul className="navigation">
-          <li>
+          <li className="navigation__">
             <NavLink to="/">
               <FaHome onClick={closeNav} className="navigation__icon" />
             </NavLink>
           </li>
           <li className="navigation__products">
-            <NavLink to="#" onClick={navtoggle}>
+            <NavLink  to="#" onClick={navtoggle}>
               Products{show ? <FaChevronRight /> : <FaChevronUp />}
             </NavLink>{" "}
             <ul

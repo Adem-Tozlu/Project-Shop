@@ -13,15 +13,18 @@ function Home() {
   const { getImages,newHome} = useContext(CategoryContext)
   const { products, addProduct  } = useContext(FetchAPIContext)
 
+
+
   
     
 
 
   return (
-    <>
-     <h1 className='home_headline'>Hightlights</h1>
+   
+    <main>
+      <h1 className='home__headline'>Hightlights</h1>
 
-    <div className="container1">
+    <div className="home__main-container">
      
     
       {newHome && newHome.map((product) => {
@@ -29,21 +32,21 @@ function Home() {
         
         return (
           
-          <div key={product.id} className='container'>
+          <div key={product.id} className='home__container'>
            
-            <div className='bild-container'><img src={getImages(product)} alt={product.title}/></div>
+            <div className='home__bild-container'><img className='home__img' src={getImages(product)} alt={product.title}/></div>
            
             <div className='addList__text'> 
             <h2>{product.title}</h2>
             
             <p>${product.price}</p>
-            <NavLink to={`/oppo`} className='button'>More</NavLink>
+            <NavLink to={`/${product.brand.toLowerCase()}`} className='addlist__button'>More</NavLink>
           </div></div>
           
         )
       })}
       </div>
-    </>
+    </main>
   );
 }
 

@@ -12,26 +12,26 @@ function Realme() {
     const { addProduct  } = useContext(FetchAPIContext)
 
   return (
-    <>
-    <div className="container1">
+    <main>
+    <div className="product">
     
       {oppo && oppo.map((product) => {
         
         return (
           
-          <div key={product.id} className='container'>
-            <div className='bild-container'><img src={getImages(product)} alt={product.title}/></div>
+          <div key={product.id} className='product__container'>
+            <div className='product__bild-container'><img className='product__img' src={getImages(product)} alt={product.title}/></div>
             <div>
             <h1>{product.title}</h1>
             <article>{product.description}</article>
             <p>${product.price}</p>
-            <button className='button' onClick={() => addProduct(product)} >Add to Cart</button>
+            <button className='product__button' onClick={() => addProduct(product)} >Add to Cart</button>
           </div></div>
           
         )
       })}
       </div>
-    </>
+    </main>
   );
 }
 

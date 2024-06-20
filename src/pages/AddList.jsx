@@ -17,16 +17,16 @@ function AddList() {
          // const { depth, height, width } = product.dimensions || {};
           return (
             <main className="main">
-              <div key={product.id} className="container">
-                <div className="bild-container">
-                <img src={getImages(product)} alt={product.title}/>
+              <div key={product.id} className="addlist__container">
+                <div className="addlist__bild-container">
+                <img className="addlist__img" src={getImages(product)} alt={product.title}/>
                 </div>
                 <div className="addList__text">
                 <h1>{product.title}</h1>
                 <p>{product.description}</p>
                 <p>${product.price}</p>
                 <button
-                  className="button"
+                  className="addlist__button"
                   onClick={() => removeProduct(product)}
                 >
                   Remove
@@ -37,9 +37,9 @@ function AddList() {
           );
         })}
       {cart.length > 0 ? (
-        <div className="block">
+        <div className="addlist__buy--total">
           <p>Total: ${itemTotal()}</p>
-          <button className="button--buy">Buy</button>
+          <button className="addlist__button--buy">Buy</button>
         </div>
       ) : (
         <>

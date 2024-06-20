@@ -4,18 +4,18 @@
 .navigation {
 
   display: flex;
-  
-  justify-content: space-around;
-  position: absolute;
   color: white;
-  left: 0;
-  right: 0;
+  position: absolute;
+  left: 2rem;
+  right: 2rem;
   bottom: 0;
   z-index: 1;
 
   &__products {
+    
     display: inline-block;
-    color: white;
+    margin: 0 auto;
+    
     
     
     

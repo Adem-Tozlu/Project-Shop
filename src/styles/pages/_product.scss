@@ -1,0 +1,20 @@
+@use "../abstracts/" as *;
+
+.product{
+  @include main-container();
+&__container{
+   @include container();
+  }
+  &__bild-container{
+   @include bild-container();
+   
+  }
+  &__img{
+    @include img();
+    }
+  &__button{
+    @include button();
+  }
+
+  
+}
