@@ -1,8 +1,8 @@
 
 
 
-//@use "../pages/_index.scss";
-//@use "../components/_index.scss";
-@use "../layout/_index.scss";
+@forward "../pages/_index.scss";
+//@forward "../components/_index.scss";
+@forward "../layout/_index.scss";
 
 

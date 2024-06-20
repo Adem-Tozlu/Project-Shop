@@ -9,6 +9,7 @@ li{
 
  
 }
+
 .container1{
   display: flex;
   justify-content: center;
@@ -18,8 +19,23 @@ li{
   position: relative;
  
 
+animation-name:container ;
+animation-duration: 3s;
+
  
 }
+@keyframes container{
+  0%{
+    transform: translateY(1000px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
 
 
 
