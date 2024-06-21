@@ -1,11 +1,11 @@
 
-import "./App.css";
+
 import "./styles/complett/_index.scss";
 import "./styles/Footer.css";
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import FetchAPI from "./context/FetchAPI";
-import Footer from "./components/Footer";
+
 import Category from "./context/Category";
 import {Home, AddList, NotPages, Samsung, Apple, Realme, Vivo, Oppo,Accessories } from "./pages";
 function App() {
@@ -26,13 +26,17 @@ function App() {
           <Route path="/accessories" element={<Accessories />} />
 
           <Route path="/addlist" element={<AddList />} />
+         
+         
         </Route>
+        
         <Route path="*" element={<NotPages />} />
        
       </Routes>
+     
      </Category>
       </FetchAPI>
-      <Footer />
+      
     </>
   );
 }

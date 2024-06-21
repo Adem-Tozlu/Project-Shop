@@ -44,11 +44,11 @@ function AddList() {
       ) : (
         <>
           <main className="main">
-            <div>
-              {" "}
+            <div className="addlist__cart-empty">
+             
               <MdOutlineShoppingCart className="icon" />
-            </div>
-            <p>Your shopping cart is empty. Shop now!</p>
+          
+            <p>Your shopping cart is empty. Shop now!</p>  </div>
           </main>
         </>
       )}

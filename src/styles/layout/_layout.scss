@@ -2,48 +2,51 @@
 @use "../base/" as *;
 
 .navigation {
-
   display: flex;
   color: white;
   position: absolute;
-  left: 2rem;
-  right: 2rem;
+  left: 0;
+  right: 0;
   bottom: 0;
   z-index: 1;
+  list-style-type: none;
 
   &__products {
-    
     display: inline-block;
     margin: 0 auto;
-    
-    
-    
-    
   }
-  &__product__text{
+  &__product__text {
     height: 0.2rem;
     background-color: white;
-    
-    
-    
-    
-
-    
+    list-style-type: none;
   }
- 
-  &__product{
+
+  &__product {
     background-color: white;
     width: 100%;
     border: 1px solid black;
     padding: 0.3rem 0.1rem;
     font-size: 1rem;
     color: black;
-   
+  }
+  &__product--undertext {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    & :hover {
+      color: #f6fbff;
+      background-color: black;
+    }
   }
 
   &__icon {
     width: 1.5rem;
     height: 1.5rem;
+  }
+  &__icon--arrow{
+    margin-left: 0.5rem;
+    width: 0.8rem;
+    height: 0.8rem;
   }
 
   &__addList {

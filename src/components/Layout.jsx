@@ -4,6 +4,7 @@ import { FaHome, FaChevronRight, FaChevronUp } from "react-icons/fa";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { FetchAPIContext } from "../context/FetchAPI";
 import { useContext, useState } from "react";
+import Footer from "../components/Footer";
 
 function Layout() {
   const { numItem } = useContext(FetchAPIContext);
@@ -22,38 +23,38 @@ function Layout() {
           </li>
           <li className="navigation__products">
             <NavLink  to="#" onClick={navtoggle}>
-              Products{show ? <FaChevronRight /> : <FaChevronUp />}
+              Products{show ? <FaChevronRight className="navigation__icon--arrow" /> : <FaChevronUp className="navigation__icon--arrow"  />}
             </NavLink>{" "}
             <ul
               className="navigation__product__text"
               style={{ display: show ? "none" : "" }}
             >
-              <li>
+              <li className="navigation__product--undertext">
                 <NavLink to="/samsung" className="navigation__product">
                   Samsung
                 </NavLink>
               </li>
-              <li>
+              <li className="navigation__product--undertext">
                 <NavLink to="/apple" className="navigation__product">
                   Apple
                 </NavLink>
               </li>
-              <li>
+              <li className="navigation__product--undertext">
                 <NavLink to="/vivo" className="navigation__product">
                   Vivo
                 </NavLink>
               </li>
-              <li>
+              <li className="navigation__product--undertext">
                 <NavLink to="/realme" className="navigation__product">
                   Realme
                 </NavLink>
               </li>
-              <li>
+              <li className="navigation__product--undertext">
                 <NavLink to="/oppo" className="navigation__product">
                   Oppo
                 </NavLink>
               </li>
-              <li>
+              <li className="navigation__product--undertext">
                 <NavLink to="/accessories" className="navigation__product">
                   Accessories
                 </NavLink>
@@ -76,6 +77,7 @@ function Layout() {
       <main onClick={closeNav}>
         <Outlet />
       </main>
+      <Footer />
     </>
   );
 }

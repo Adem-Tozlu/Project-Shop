@@ -1,64 +1,50 @@
+@use "../abstracts/" as *;
+
+:root{
+    --color-blue: #{$color-blue};
+}
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 ;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 62,5%;
-    font-family: 'Jost', sans-serif;
+  
+  font-family: "Jost", sans-serif;
 }
 
 body {
-    margin: 0 auto;
-  
-    text-align: center;
-    font-size: 10px;
-    background-color: #2f5e8d;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 10px;
+  background-color: var(--color-blue);
 }
 header {
-   height: 10rem;
-   
-    font-size: 20px;
-   
-    position: relative;
-    background-image:url("/images/banner.jpg");
-    & :hover{
-        color: #2f5e8d;
-   
-    }
-  
-}
-header a{
+  height: 10rem;
+
+  font-size: 20px;
+
+  position: relative;
+  background-image: url("/images/banner.jpg");
+  & :hover {
+    color: var(--color-blue);
+  }
+  & a {
     color: white;
     text-decoration: none;
-  
-   
-}
-main{
-    margin:  auto;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    position: relative;
-    max-width: 95rem;
-    margin: 0px auto;
-    padding: 0 2rem;
   }
-  li{
-    display:flex;
-    justify-content: center;
-   list-style-type: none;
-   & :hover{
-    color: #2f5e8d;
-    background-color: black;
 }
-  
-  
-   
-  }
-  
-    a{
-     
-    }
-    
+
+main {
+  margin: auto;
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  max-width: 95rem;
+  margin: 0px auto;
+  padding: 0 2rem;
+}

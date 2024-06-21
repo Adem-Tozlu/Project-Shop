@@ -1,0 +1,12 @@
+@use "../abstracts/" as *;
+.notpages{
+    height: 100vh;
+    width: 100%;
+    margin:0 auto;
+    font-size: 2rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+ 
+   
+}

@@ -1,7 +1,14 @@
-@mixin make-container() {
-    max-width: 75rem;
-    margin: 0px auto;
-    padding: 0 2rem;}
+@use "variables" as *;
+
+:root {
+    --color-secondary: #{$color-secondary};
+  }
+
+
+// @mixin make-container() {
+//     max-width: 75rem;
+//     margin: 0px auto;
+//     padding: 0 2rem;}
 
     @mixin main-container() {
 
@@ -41,7 +48,7 @@
 
     @mixin button(){
         position: absolute;
-  background-color: #4CAF50;
+  background-color:var(--color-secondary);
   border: none;
   color: white;
   padding: 15px 25px;
