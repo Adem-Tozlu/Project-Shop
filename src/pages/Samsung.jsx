@@ -6,7 +6,7 @@ import { useContext, useState } from "react";
 function Samsung() {
   const { samsung, getImages } = useContext(CategoryContext);
   const { addProduct } = useContext(FetchAPIContext);
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
   const closeNav = (id) => setShow(id);
 
  
@@ -29,9 +29,9 @@ function Samsung() {
                   />
                 </div>
 
-                <div style={{ display: show ? "none" : "" }}>
+                <div style={{ display: show === product.id ? "none" : "" }}>
                   <h1>{product.title}</h1>
-                  <article>{product.description}</article>
+                 
                   <p>${product.price}</p>
                   <button
                     className="product__button"
@@ -40,7 +40,7 @@ function Samsung() {
                     Details
                   </button>
                 </div>
-                <div style={{ display: show ===product.id ? "" : "none" }}>
+                <div style={{ display: show === product.id ? "" : "none" }}>
                   <h1>{product.title}</h1>
                   <article>{product.description}</article>
                   <p>${product.price}</p>

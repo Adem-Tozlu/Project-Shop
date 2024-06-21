@@ -1,5 +1,5 @@
 import { FetchAPIContext } from "./FetchAPI";
-import React, { createContext, useEffect, useState, useContext } from "react";
+import React, { createContext, useContext } from "react";
 import { imagesArray } from "../components/images";
 import { highlights } from "../components/highlights";
 

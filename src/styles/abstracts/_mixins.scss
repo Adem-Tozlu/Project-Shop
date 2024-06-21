@@ -16,8 +16,11 @@
         justify-content: center;
         margin:  auto;
         flex-wrap: wrap;
+        width:100vw ;
+        
         gap: 0.1rem;
         position: relative;
+       
     }
 
     @mixin container(){
@@ -25,14 +28,20 @@
         grid-template-columns: 1fr 1fr;
         grid-gap: 1rem;
         justify-content: center;
-        margin: auto;
+        margin:1rem ;
         position: relative;
+        min-width: 19rem;
         max-width: 30rem;
         max-height: 15rem;
-        margin: 1rem;
+        
         border: 1px solid #ccc;
         border-radius: 20px;
         background-color: white;
+        @media (min-width: $breakpoint-sm) {
+    max-width: 35rem;
+    min-height: 17.5rem;
+        }
+        
     }
     @mixin bild-container(){
         padding: 1rem;
@@ -44,6 +53,10 @@
         height: 15rem; 
         flex-wrap: wrap;
         box-sizing: border-box;
+        position: relative;
+        @media (min-width: $breakpoint-sm) {
+   
+        }
     }
 
     @mixin button(){
@@ -68,4 +81,6 @@
         width: 100%; 
         height: auto; 
         
+        
     }
+

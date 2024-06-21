@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
-import { FetchAPIContext } from '../context/FetchAPI'
+import React from 'react'
+
 import { CategoryContext } from '../context/Category'
 import { useContext} from 'react'
-import { highlights } from "../components/highlights";
+
 import { NavLink,} from "react-router-dom";
 
 
@@ -11,7 +11,7 @@ import { NavLink,} from "react-router-dom";
 
 function Home() {
   const { getImages,newHome} = useContext(CategoryContext)
-  const { products, addProduct  } = useContext(FetchAPIContext)
+  
 
 
 

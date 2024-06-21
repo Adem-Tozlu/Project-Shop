@@ -2,7 +2,10 @@ import React from 'react'
 
 import { FetchAPIContext } from '../context/FetchAPI'
 import { CategoryContext } from '../context/Category'
-import { useContext} from 'react'
+import { useContext,useState} from 'react'
+import { TbArrowBackUp } from "react-icons/tb";
+
+
 
 
 
@@ -12,23 +15,45 @@ import { useContext} from 'react'
 function Accessories() {
     const { accessories,getImages} = useContext(CategoryContext)
     const { addProduct  } = useContext(FetchAPIContext)
+    const [show, setShow] = useState(true);
+    const closeNav = (id) => setShow(id);
+    
+
 
   return (
     <main>
     <div className="product">
     
       {accessories && accessories.map((product) => {
-        
+       
+       
         return (
           
           <div key={product.id} className='product__container'>
             <div className='product__bild-container'><img className='product__img' src={getImages(product)} alt={product.title}/></div>
-            <div>
-            <h1>{product.title}</h1>
-            <article>{product.description}</article>
-            <p>${product.price}</p>
-            <button className='product__button' onClick={() => addProduct(product)} >Add to Cart</button>
-          </div></div>
+            <div style={{ display: show === product.id ? "none" : "" }}>
+                  <h1>{product.title}</h1>
+                 
+                  <p>${product.price}</p>
+                  <button
+                    className="product__button"
+                    onClick={()=>closeNav(product.id)}
+                  >
+                    Details
+                  </button>
+                </div>
+                <div style={{ display: show === product.id ? "" : "none" }}>
+                 
+                  <article className='product__description'>{product.description}</article>
+        
+                 <button onClick={()=>{setShow(true)}} className='product__back-icon'> < TbArrowBackUp  /> </button>
+                  <button
+                    className="product__button"
+                    onClick={() => addProduct(product)}
+                  >
+                    Add to Cart
+                  </button>
+                </div></div>
           
         )
       })}

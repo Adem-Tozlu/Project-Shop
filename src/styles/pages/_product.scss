@@ -1,5 +1,9 @@
 @use "../abstracts/" as *;
 
+:root {
+  --color-secondary: #{$color-secondary};
+}
+
 .product{
   @include main-container();
 &__container{
@@ -16,5 +20,26 @@
     @include button();
   }
 
-  
+  // Ab hier habe ich den Detailsbereich
+  &__description{
+    padding: 0.2rem;
+font-size: 0.85rem;
+@media (min-width: $breakpoint-xs) {
+  padding: 0.5rem;
+  font-size: 1rem;
 }
+
+  }
+
+  &__back-icon{
+    left: 0.5rem;
+    top: 0.5rem;
+    position: absolute;
+    font-size: 1.5rem;
+    border-radius: 1000px;
+    background-color:var(--color-secondary);
+    border-style: none;
+    
+
+  
+}}
