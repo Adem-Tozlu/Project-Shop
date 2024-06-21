@@ -36,11 +36,11 @@ function Home() {
            
             <div className='home__bild-container'><img className='home__img' src={getImages(product)} alt={product.title}/></div>
            
-            <div className='addList__text'> 
-            <h2>{product.title}</h2>
+            <div> 
+            <h2 className='home__title'>{product.brand}</h2>
             
-            <p>${product.price}</p>
-            <NavLink to={`/${product.brand.toLowerCase()}`} className='addlist__button'>More</NavLink>
+            <p className='home__flat-text' >+ allnet flat </p>
+            <NavLink to={`/${product.brand.toLowerCase()}`} className='home__button'>More</NavLink>
           </div></div>
           
         )

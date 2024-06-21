@@ -1,43 +1,75 @@
 @use "../abstracts/" as *;
 
-.home{
-&__headline{margin: 2rem;}
+.home {
+  &__headline {
+    margin: 2rem;
+
+    text-transform: uppercase;
+    background-image: linear-gradient(
+      -250deg,
+      #231557 0%,
+      #44107a 29%,
+      #ff1361 67%,
+      #fff800 100%
+    );
     
-&__main-container{
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    font-size: 3rem;
+  }
+
+  @keyframes textclip {
+    to {
+      background-position: 200% center;
+    }
+  }
+
+  &__main-container {
     @include main-container();
- 
 
-animation-name:container ;
-animation-duration: 2s;
-animation-timing-function: ease-in-out;
-
-
- 
-}
-
- 
-
-@keyframes container{
-  0%{
-    transform: translateY(50rem);
-    opacity: 0;
-  }
-  100%{
-    transform: translateY(0);
-    opacity: 1;
+    animation-name: container;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
   }
 
- 
-}
-&__img{
-  @include img();
+  @keyframes container {
+    0% {
+      transform: translateX(-90rem);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
   }
-&__container{
-   @include container();
+  &__img {
+    @include img();
   }
-  &__bild-container{
-   @include bild-container();
-   
+  &__container {
+    @include container();
   }
-  
+  &__bild-container {
+    @include bild-container();
+  }
+  &__title{
+    margin: 1rem auto;
+    font-size: 3rem;
+  }
+  &__flat-text{
+    display: inline-block;
+    text-transform: uppercase;
+    background-color: red;
+    color: white;
+    font-size:1.5rem;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    &:hover{
+      background-color:rgb(211, 54, 54);
+    }
+  }
+  &__button{
+    @include button();
+  }
 }
