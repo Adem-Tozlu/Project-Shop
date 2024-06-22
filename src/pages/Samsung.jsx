@@ -2,6 +2,7 @@ import React from "react";
 import { FetchAPIContext } from "../context/FetchAPI";
 import { CategoryContext } from "../context/Category";
 import { useContext, useState } from "react";
+import { TbArrowBackUp } from "react-icons/tb";
 
 function Samsung() {
   const { samsung, getImages } = useContext(CategoryContext);
@@ -41,9 +42,10 @@ function Samsung() {
                   </button>
                 </div>
                 <div style={{ display: show === product.id ? "" : "none" }}>
-                  <h1>{product.title}</h1>
-                  <article>{product.description}</article>
-                  <p>${product.price}</p>
+                 
+                 <article className='product__description'>{product.description}</article>
+       
+                <button onClick={()=>{setShow(true)}} className='product__back-icon'> < TbArrowBackUp  /> </button>
                   <button
                     className="product__button"
                     onClick={() => addProduct(product)}

@@ -15,7 +15,11 @@ function FetchAPI({ children }) {
     fetch("https://dummyjson.com/products/search?q=phone")
       .then((response) => response.json())
       .then((data) => {
-        setProducts(data.products || []);
+        setProducts(data.products);
+      })
+      .catch((error) => {
+        console.error("Fehler beim laden", error);
+        
       });
   }, []);
 
@@ -31,6 +35,8 @@ function FetchAPI({ children }) {
   const itemTotal = () => {
     return cart.reduce((total, item) => total + item.price, 0).toFixed(2);
   };
+
+  
   return (
     <FetchAPIContext.Provider
       value={{ products, cart, numItem, addProduct, removeProduct, itemTotal }}

@@ -8,7 +8,9 @@ import FetchAPI from "./context/FetchAPI";
 
 import Category from "./context/Category";
 import {Home, AddList, NotPages, Samsung, Apple, Realme, Vivo, Oppo,Accessories } from "./pages";
+import Contact from "./pages/Contact";
 function App() {
+ 
   return (
     <>
     <FetchAPI>
@@ -24,7 +26,7 @@ function App() {
           <Route path="/vivo" element={<Vivo />} />
           <Route path="/oppo" element={<Oppo />} />
           <Route path="/accessories" element={<Accessories />} />
-
+          <Route path="/contact" element={<Contact/>}/>
           <Route path="/addlist" element={<AddList />} />
          
          

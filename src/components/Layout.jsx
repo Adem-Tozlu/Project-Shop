@@ -1,15 +1,18 @@
 import React from "react";
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink, Outlet,useNavigate } from "react-router-dom";
 import { FaHome, FaChevronRight, FaChevronUp } from "react-icons/fa";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { FetchAPIContext } from "../context/FetchAPI";
 import { useContext, useState } from "react";
 import Footer from "../components/Footer";
 
+
 function Layout() {
+ 
+  
   const { numItem } = useContext(FetchAPIContext);
   const [show, setShow] = useState(true);
-
+  const navigate = useNavigate();
   const navtoggle = () => setShow(!show);
   const closeNav = () => setShow(true);
   return (
@@ -62,6 +65,7 @@ function Layout() {
 
             </ul>
           </li>
+          <span onClick={(()=>navigate("/contact"))}>Contact</span>
           <NavLink to="/addlist" className="navigation__addList">
             <span className={numItem && "navigation__addList--numItem"}>
               {numItem ? numItem : ""}
