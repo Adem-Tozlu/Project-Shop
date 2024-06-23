@@ -15,9 +15,9 @@ function Apple() {
   
 
   return (
-    <main>
+    <main className='product__main'>
     <div className="product">
-    
+  
       {apple && apple.map((product) => {
         
         return (
@@ -25,9 +25,10 @@ function Apple() {
           <div key={product.id} className='product__container'>
             <div className='product__bild-container'><img className='product__img' src={getImages(product)} alt={product.title}/></div>
             <div style={{ display: show === product.id ? "none" : "" }}>
-                  <h1>{product.title}</h1>
+            <h1 className="product__title">{product.title}</h1>
+                 
                   
-                  <p>${product.price}</p>
+                 <p className="product__price">${product.price}</p>
                   <button
                     className="product__button"
                     onClick={()=>closeNav(product.id)}
@@ -50,8 +51,10 @@ function Apple() {
           
         )
       })}
-      </div>
-    </main>
+        </div>
+       </main>
+    
+   
   );
 }
 

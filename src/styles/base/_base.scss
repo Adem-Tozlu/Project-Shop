@@ -1,5 +1,6 @@
 @use "../abstracts/" as *;
 
+
 :root{
     --color-blue: #{$color-blue};
 }
@@ -12,14 +13,21 @@
 
 html {
   
-  font-family: "Jost", sans-serif;
+  font-family: 'SamsungOne 400';
+  font-style: normal;
+  font-weight: normal;
+  
+   
 }
 
 body {
+  
+  position: relative;
   margin: 0 auto;
   text-align: center;
   font-size: 10px;
   background-color: var(--color-blue);
+  //background-color: rgb(230, 0, 0);
 }
 header {
   height: 10rem;
@@ -35,17 +43,5 @@ header {
     color: white;
     text-decoration: none;
   }
-}
 
-main {
- 
-  margin:0 auto;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  position: relative;
-  max-width: 95rem;
-  
- 
- 
 }

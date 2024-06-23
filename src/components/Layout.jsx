@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink, Outlet,useNavigate } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import { FaHome, FaChevronRight, FaChevronUp } from "react-icons/fa";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { FetchAPIContext } from "../context/FetchAPI";
@@ -12,14 +12,14 @@ function Layout() {
   
   const { numItem } = useContext(FetchAPIContext);
   const [show, setShow] = useState(true);
-  const navigate = useNavigate();
+
   const navtoggle = () => setShow(!show);
   const closeNav = () => setShow(true);
   return (
     <>
       <header className="header">
         <ul className="navigation">
-          <li className="navigation__">
+          <li >
             <NavLink to="/">
               <FaHome onClick={closeNav} className="navigation__icon" />
             </NavLink>
@@ -62,10 +62,14 @@ function Layout() {
                   Accessories
                 </NavLink>
               </li>
-
+         
             </ul>
+           
           </li>
-          <span onClick={(()=>navigate("/contact"))}>Contact</span>
+          <NavLink to="/contact" className="navigation__addList">
+          Contact
+                </NavLink>
+        
           <NavLink to="/addlist" className="navigation__addList">
             <span className={numItem && "navigation__addList--numItem"}>
               {numItem ? numItem : ""}

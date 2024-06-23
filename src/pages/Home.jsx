@@ -21,7 +21,7 @@ function Home() {
 
   return (
    
-    <main>
+    <main className='home'>
       <h1 className='home__headline'>Hightlights</h1>
 
     <div className="home__main-container">
@@ -36,7 +36,7 @@ function Home() {
            
             <div className='home__bild-container'><img className='home__img' src={getImages(product)} alt={product.title}/></div>
            
-            <div> 
+            <div className='home__title_flat-container'> 
             <h2 className='home__title'>{product.brand}</h2>
             
             <p className='home__flat-text' >+ allnet flat </p>

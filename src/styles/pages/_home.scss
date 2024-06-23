@@ -1,6 +1,10 @@
 @use "../abstracts/" as *;
 
 .home {
+ 
+  max-width: 95vw;
+  
+
   &__headline {
     margin: 2rem auto;
 
@@ -32,7 +36,8 @@
 
   &__main-container {
     @include main-container();
-
+    padding-bottom: 25rem;
+  
     animation-name: container;
     animation-duration: 3s;
     animation-timing-function: ease-in-out;
@@ -55,14 +60,19 @@
     @include img();
   }
   &__container {
+    
     @include container();
   }
   &__bild-container {
     @include bild-container();
   }
+  &__title_flat-container{
+    padding-right: 0.3rem;
+  }
   &__title{
+   
     margin: 1rem auto;
-    font-size: 2rem;
+    font-size: 1.5rem;
 
     @media (min-width: $breakpoint-xs) {
     font-size: 3rem;
@@ -73,7 +83,7 @@
     text-transform: uppercase;
     background-color: red;
     color: white;
-    font-size:1rem;
+    font-size:0.8rem;
     padding: 0.5rem;
     margin-top: 1rem;
     @media (min-width: $breakpoint-xs) {

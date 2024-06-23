@@ -11,7 +11,7 @@ import "../styles/Footer.css";
 
 function Footer() {
   return (
-    <>
+    
       
       <footer className="footer">
         
@@ -68,7 +68,7 @@ function Footer() {
           </form>
         </div>
       </footer>
-    </>
+    
   );
 }
 

@@ -5,13 +5,52 @@
 }
 
 .product{
-  @include main-container();
+  font-size: 0.4rem;
+  padding-bottom: 25rem;
+  display: flex;
+  flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin:0 auto;
+        min-height: 100vh;
+       
+      // max-width: 65vw;
+      
+
+  
+  &__main {
+    @include main-container();
+    min-height: 100%;
+   
+  }
+
 &__container{
    @include container();
+  
   }
   &__bild-container{
    @include bild-container();
    
+  }
+
+  &__title{
+    padding:0.7rem 0.7rem 0 0;
+    @media (min-width: $breakpoint-xs) {
+ 
+      font-size: 1.2rem;
+    }
+
+  }
+  &__price{
+    position: absolute;
+    bottom:4rem;
+    right: 6.31rem;
+    font-weight: bold;
+    font-size: 1rem;
+    @media (min-width: $breakpoint-xs) {
+ 
+      font-size: 1.3rem;
+    }
   }
   &__img{
     @include img();
@@ -22,11 +61,11 @@
 
   // Ab hier habe ich den Detailsbereich
   &__description{
-    padding: 0.2rem;
-font-size: 0.85rem;
+    padding:0.7rem 0.7rem 0 0;
+font-size: 0.7rem;
 @media (min-width: $breakpoint-xs) {
-  padding: 0.5rem;
-  font-size: 1rem;
+ 
+  font-size: 0.9rem;
 }
 
   }
@@ -42,4 +81,8 @@ font-size: 0.85rem;
     
 
   
-}}
+}
+
+
+
+}
