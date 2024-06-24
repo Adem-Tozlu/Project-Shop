@@ -18,7 +18,7 @@ function Layout() {
 
   const navmenu = ()=> setMenu(!menu)
   const navtoggle = () => setShow(!show);
-  const closeNav = () => setShow(true);
+  const closeNav = () => [setShow(true), setMenu(true)];
   return (
     <>
       <header className="header">
@@ -26,15 +26,18 @@ function Layout() {
         
           <li > 
             <NavLink to="/">
-            <h1 className="head">PhonePalast</h1>
+            <h1 className="navigation__headtext">PhonePalast</h1>
               {/* <FaHome onClick={closeNav} className="navigation__icon" /> */}
             </NavLink>
           </li>
-          <li className="navigation__menu">
-          <RxHamburgerMenu onClick={navmenu}/>
+          
+          <RxHamburgerMenu onClick={navmenu} className="navigation__menu"/>
             <ul className="navigation__product__text"  style={{ display: menu ? "none" : "" }} >
+            <NavLink to="/contact" className=" navigation__contact">
+          Contact
+                </NavLink>
           <li className="navigation__products" >
-            <NavLink  to="#" onClick={navtoggle}>
+            <NavLink  to="#" onClick={navtoggle} className={"navigation__product-text"}>
               Products{show ? <FaChevronRight className="navigation__icon--arrow" /> : <FaChevronUp className="navigation__icon--arrow"  />}
             </NavLink>{" "}
             <ul
@@ -70,15 +73,13 @@ function Layout() {
                 <NavLink to="/accessories" className="navigation__product">
                   Accessories
                 </NavLink>
-              </li>
-         
-            </ul>
-           
-          </li>
-          <NavLink to="/contact" className="navigation__addList navigation__contact">
-          Contact
-                </NavLink> </ul></li>
+                </li>
         
+         
+            </ul></li>
+           
+          
+        </ul>
           <NavLink to="/addlist" className="navigation__addList">
             <span className={numItem && "navigation__addList--numItem"}>
               {numItem ? numItem : ""}

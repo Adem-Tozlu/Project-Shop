@@ -37,7 +37,7 @@
 
   &__main-container {
     @include main-container();
-    padding-bottom: 5rem;
+    padding-bottom: 2rem;
   
     animation-name: container;
     animation-duration: 3s;

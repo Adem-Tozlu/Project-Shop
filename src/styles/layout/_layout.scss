@@ -5,34 +5,58 @@
   display: flex;
   color: white;
   align-items: end;
+  justify-content: start;
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
   z-index: 1;
   list-style-type: none;
+&__headtext{
+  text-transform: uppercase;
+  font-size: 1.3rem;
+      font-family: "Permanent Marker", cursive;
+      font-weight: 400;
+      font-style: normal;
+      position: absolute;
+      left: 1.5rem;
+      top: 0.5rem;
 
+}
 &__menu{
 
- position: absolute;
- right:1rem ;
-  display: inline-block;
+position: absolute;
+list-style-type: none;
+ right:1.5rem ;
+ font-size: 1.5rem;
+  bottom: 0.2rem;
+  color: white;
+  //display: inline-block;
   @media (min-width: $breakpoint-md) {
    
   }
 }
   &__products {
-    
+   color: black;
     margin: 0 auto;
-    display: none;
+  background-color: white;
     @media (min-width: $breakpoint-md) {
       display: block;
     }
   }
   &__product__text {
-    height: 0.2rem;
-    background-color: white;
+    height: 0;
+   // background-color: white;
     list-style-type: none;
+    position: absolute;
+    right: 0;
+    
+  
+
+  }
+  &__product-text {
+   color: black;
+
   }
 
   &__product {
@@ -67,6 +91,8 @@
   &__addList {
     position: relative;
     display: inline-block;
+    margin-bottom: 2rem;
+    margin-right: 1.5rem;
     
     
     &--numItem {
@@ -84,7 +110,12 @@
   }
 }
 .navigation__contact{
-  display: none;
+ // position: relative;
+  display: inline-block;
+  background-color: white;
+  color: black;
+  width: 100%;
+  list-style-type: none;
   @media (min-width: $breakpoint-md) {
     display: inline-block;
   }
