@@ -1,16 +1,48 @@
 @use "../abstracts/" as *;
 
+.contact__main{
+    min-height: 100vh;
+    padding-bottom: 25rem;
+    align-items: center;
+    display: grid;
 
+  
+}
 .form{
-  min-height: 100vh;
+align-items: center;
    display: flex;
    flex-direction: column;
    font-size: 1rem;
+
+   &__headline{
+    margin-bottom: 2rem;
+   }
+   &__contact__error-message{
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: rgb(207, 30, 30);
+    font-weight: bold;
+    //text-shadow: 1px 1px 10px rgb(12, 2, 4);
+   }
+   &__contact-button{
+    @include button();
+    position: static;
+    margin-top: 1rem;
+   }
 
    
 }
 #email,#name,#password{
     width: 30vh;
+    min-height:2rem ;
+    padding-left: 0.5rem;
+    
+}#message{
+    width: 30vh;
+    min-height: 5rem;
+    & :focus{
+    list-style-type: none;
+    }
 }
 .contact__messages{
    height:50vh;
@@ -20,4 +52,7 @@
     display: grid;
     justify-content: center;
     align-items: center;
+}
+label{
+    margin: 0.5rem;
 }

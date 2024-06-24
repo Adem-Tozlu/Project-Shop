@@ -5,6 +5,8 @@ import { MdOutlineShoppingCart } from "react-icons/md";
 import { FetchAPIContext } from "../context/FetchAPI";
 import { useContext, useState } from "react";
 import Footer from "../components/Footer";
+import { RxHamburgerMenu } from "react-icons/rx";
+
 
 
 function Layout() {
@@ -12,19 +14,26 @@ function Layout() {
   
   const { numItem } = useContext(FetchAPIContext);
   const [show, setShow] = useState(true);
+  const [menu, setMenu] = useState(true);
 
+  const navmenu = ()=> setMenu(!menu)
   const navtoggle = () => setShow(!show);
   const closeNav = () => setShow(true);
   return (
     <>
       <header className="header">
         <ul className="navigation">
-          <li >
+        
+          <li > 
             <NavLink to="/">
-              <FaHome onClick={closeNav} className="navigation__icon" />
+            <h1 className="head">PhonePalast</h1>
+              {/* <FaHome onClick={closeNav} className="navigation__icon" /> */}
             </NavLink>
           </li>
-          <li className="navigation__products">
+          <li className="navigation__menu">
+          <RxHamburgerMenu onClick={navmenu}/>
+            <ul className="navigation__product__text"  style={{ display: menu ? "none" : "" }} >
+          <li className="navigation__products" >
             <NavLink  to="#" onClick={navtoggle}>
               Products{show ? <FaChevronRight className="navigation__icon--arrow" /> : <FaChevronUp className="navigation__icon--arrow"  />}
             </NavLink>{" "}
@@ -66,9 +75,9 @@ function Layout() {
             </ul>
            
           </li>
-          <NavLink to="/contact" className="navigation__addList">
+          <NavLink to="/contact" className="navigation__addList navigation__contact">
           Contact
-                </NavLink>
+                </NavLink> </ul></li>
         
           <NavLink to="/addlist" className="navigation__addList">
             <span className={numItem && "navigation__addList--numItem"}>

@@ -6,15 +6,15 @@
 
 .product{
   font-size: 0.4rem;
-  padding-bottom: 25rem;
+ //padding-bottom: 25rem;
   display: flex;
   flex-direction: row;
         justify-content: center;
         flex-wrap: wrap;
         margin:0 auto;
         min-height: 100vh;
-       
-      // max-width: 65vw;
+      
+   
       
 
   
@@ -78,6 +78,7 @@ font-size: 0.7rem;
     border-radius: 1000px;
     background-color:var(--color-secondary);
     border-style: none;
+    cursor: pointer;
     
 
   

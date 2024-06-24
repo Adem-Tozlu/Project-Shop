@@ -21,9 +21,9 @@ function AddList() {
                   <img className="addlist__img" src={getImages(product)} alt={product.title}/>
                 </div>
                 <div className="addlist__text">
-                  <h1>{product.title}</h1>
-                 
-                  <p>${product.price}</p>
+                <h1 className="product__title">{product.title}</h1>
+
+<p className="product__price">${product.price}</p>
                   <button className="addlist__button" onClick={() => removeProduct(product)}>Remove</button>
                 </div>
               </div>

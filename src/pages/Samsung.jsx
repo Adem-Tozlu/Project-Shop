@@ -10,15 +10,9 @@ function Samsung() {
   const [show, setShow] = useState(true);
   const closeNav = (id) => setShow(id);
 
- 
-    
-    
-   
-
   return (
-    <main className='product__main'>
+    <main className="product__main">
       <div className="product">
-       
         {samsung &&
           samsung.map((product) => {
             return (
@@ -31,24 +25,31 @@ function Samsung() {
                   />
                 </div>
 
-                <div style={{ display: show === product.id ? "none" : "" }} >
+                <div style={{ display: show === product.id ? "none" : "" }}>
                   <h1 className="product__title">{product.title}</h1>
-                 
-                  
+
                   <p className="product__price">${product.price}</p>
                   <button
                     className="product__button"
-                    onClick={()=>closeNav(product.id)}
+                    onClick={() => closeNav(product.id)}
                   >
-                    
                     Details
                   </button>
                 </div>
                 <div style={{ display: show === product.id ? "" : "none" }}>
-                 
-                 <article className='product__description'>{product.description}</article>
-       
-                <button onClick={()=>{setShow(true)}} className='product__back-icon'> < TbArrowBackUp  /> </button>
+                  <article className="product__description">
+                    {product.description}
+                  </article>
+
+                  <button
+                    onClick={() => {
+                      setShow(true);
+                    }}
+                    className="product__back-icon"
+                  >
+                    {" "}
+                    <TbArrowBackUp />{" "}
+                  </button>
                   <button
                     className="product__button"
                     onClick={() => addProduct(product)}
@@ -59,10 +60,8 @@ function Samsung() {
               </div>
             );
           })}
-          
       </div>
-      </main>
-    
+    </main>
   );
 }
 

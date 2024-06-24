@@ -14,9 +14,9 @@
        
         display: flex;
         justify-content: center;
-        margin:  auto;
+        margin: auto;
         flex-wrap: wrap;
-        //max-width:95vw ;
+        max-width:65rem ;
 
         gap: 0.1rem;
         position: relative;
@@ -46,6 +46,13 @@
     max-width: 35rem;
     min-height: 17.5rem;
         }
+        @media (min-width: $breakpoint-md) {
+      
+            max-width: 29rem;
+           min-height: 11.5rem;
+             }
+             
+
         
     }
     @mixin bild-container(){

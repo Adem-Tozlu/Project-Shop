@@ -1,7 +1,7 @@
 
 
 import "./styles/complett/_index.scss";
-import "./styles/Footer.css";
+
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import FetchAPI from "./context/FetchAPI";
