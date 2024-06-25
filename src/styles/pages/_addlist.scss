@@ -1,78 +1,71 @@
 @use "../abstracts/" as *;
 
-
-.addlist{
+.addlist {
   padding-bottom: 10rem;
-  
- 
-  @include main-container();
-  
 
-  &__cart-empty{
+  @include main-container();
+
+  &__cart-empty {
     min-height: 100vh;
-   width: 60%;
-    margin:0 auto;
+    width: 60%;
+    margin: 0 auto;
     font-size: 2rem;
     display: flex;
-   position: relative;
-    align-items : center;
+    position: relative;
+    align-items: center;
   }
-  &__cart-empty-shop-now{
+  &__cart-empty-shop-now {
     cursor: pointer;
-    &:hover{
+    &:hover {
       color: red;
     }
   }
-  &__cart-empty-icon{
+  &__cart-empty-icon {
     font-size: 30vh;
     position: absolute;
     left: -50%;
-    right:-50%;
-    color:rgba(33, 33, 43, 0.123) ;
+    right: -50%;
+    color: rgba(33, 33, 43, 0.123);
     z-index: -1;
   }
-&__container{
-  
-   @include container();
+  &__container {
+    @include container();
   }
-  &__bild-container{
-   @include bild-container();
-   
+  &__bild-container {
+    @include bild-container();
   }
-  &__img{
-  @include img();
+  &__img {
+    @include img();
   }
 
-  &__text{
+  &__text {
     font-size: 0.9rem;
   }
-  &__total-text{
+  &__total-text {
     font-size: 2rem;
   }
 
-  &__button{
+  &__button {
     @include button();
   }
-  &__buy--total{
+  &__buy--total {
     display: inline-block;
     align-items: center;
     margin: 4rem 0 auto;
 
     width: 100%;
   }
-  &__button--buy{
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 15px 25px;
-  text-decoration: none;
-  
-  font-size: 10px;
-  font-weight: bold;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 1000px;
+  &__button--buy {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    padding: 15px 25px;
+    text-decoration: none;
+
+    font-size: 10px;
+    font-weight: bold;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 1000px;
   }
- 
-  
 }

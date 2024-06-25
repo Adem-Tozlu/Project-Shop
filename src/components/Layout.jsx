@@ -1,11 +1,12 @@
 import React from "react";
 import { NavLink, Outlet } from "react-router-dom";
-import { FaHome, FaChevronRight, FaChevronUp } from "react-icons/fa";
+import { FaChevronRight, FaChevronUp } from "react-icons/fa";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { FetchAPIContext } from "../context/FetchAPI";
 import { useContext, useState } from "react";
 import Footer from "../components/Footer";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { useEffect } from "react";
 
 
 
@@ -15,10 +16,34 @@ function Layout() {
   const { numItem } = useContext(FetchAPIContext);
   const [show, setShow] = useState(true);
   const [menu, setMenu] = useState(true);
+  const [nav, setNav] = useState(true)
 
   const navmenu = ()=> setMenu(!menu)
   const navtoggle = () => setShow(!show);
-  const closeNav = () => [setShow(true), setMenu(true)];
+  
+  const closeNav = () => [setShow(true), setMenu(nav)];
+
+
+
+  useEffect(() => {
+    const menuOut = () => {
+      if (window.innerWidth > 1023) {
+        setMenu(false); 
+        setNav(false)
+       
+      } else {
+        setMenu(true); 
+        setNav(true)
+      }
+    };
+    menuOut();
+  
+    window.addEventListener('resize', menuOut);
+  
+    return () => window.removeEventListener('resize', menuOut);
+  }, []);
+
+
   return (
     <>
       <header className="header">
@@ -32,7 +57,7 @@ function Layout() {
           </li>
           
           <RxHamburgerMenu onClick={navmenu} className="navigation__menu"/>
-            <ul className="navigation__product__text"  style={{ display: menu ? "none" : "" }} >
+            <ul className="navigation__product__contact-product"  style={{ display: menu ? "none" : "" }} >
             <NavLink to="/contact" className=" navigation__contact">
           Contact
                 </NavLink>

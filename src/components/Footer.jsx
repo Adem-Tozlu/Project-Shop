@@ -12,8 +12,8 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="footer__container_1">
-        <h1 className="head">PhonePalast</h1>
-        <span className="footer__copyright-text">&copy;2024 PhonePalast | <NavLink to="#" >
+        <h1 className="footer__container_1-headline">PhonePalast</h1>
+        <span className="footer__container_1-copyright-text">&copy;2024 PhonePalast | <NavLink to="#" >
          Impressum
                 </NavLink> </span>
       </div>

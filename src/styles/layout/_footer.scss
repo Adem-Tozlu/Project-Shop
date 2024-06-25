@@ -2,36 +2,51 @@
 
 :root {
   --color-dark-blue: #212529;
-  --color-grey: #AAAAB3;
-  --color-red-orange: #A7727d;
+  --color-grey: #aaaab3;
+  --color-red-orange: #a7727d;
 }
 
 .footer {
   &__container_1 {
-    
+    &-headline {
+      text-transform: uppercase;
+      font-size: 1.3rem;
+      font-family: "Permanent Marker", cursive;
+      font-weight: 400;
+      font-style: normal;
+      @media (min-width: $breakpoint-md) {
+        font-size: 1.6rem;
+      }
+    }
+
+    &-copyright-text {
+      font-size: 0.5rem;
+      @media (min-width: $breakpoint-md) {
+        font-size: 0.7rem;
+      }
+    }
   }
 
   &__icon {
-  
     display: block;
-
     cursor: pointer;
-   
   }
 
   &__container_2 {
     font-size: 1.2rem;
     display: flex;
-    width: 8rem;
+    width: min(calc(40vw), 20rem);
     justify-content: space-around;
-   
-  }
-  &__copyright-text{
-    font-size: 0.5rem;
- 
-    a{
-      color: white;
-      text-decoration: none;
+    @media (min-width: $breakpoint-sm) {
+      font-size: 1.4rem;
     }
+    @media (min-width: $breakpoint-md) {
+      font-size: 1.5rem;
+    }
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
   }
 }

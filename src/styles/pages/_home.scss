@@ -1,10 +1,8 @@
 @use "../abstracts/" as *;
 
 .home {
- 
   //max-width: 65vw;
   min-height: 100vh;
-  
 
   &__headline {
     margin: 2rem auto;
@@ -17,7 +15,7 @@
       #ff1361 67%,
       #fff800 100%
     );
-    
+
     background-size: 200% auto;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -26,7 +24,6 @@
     @media (min-width: $breakpoint-xs) {
       font-size: 3rem;
     }
-    
   }
 
   @keyframes textclip {
@@ -37,13 +34,13 @@
 
   &__main-container {
     @include main-container();
+    min-height: 70vh;
     padding-bottom: 2rem;
-  
+
     animation-name: container;
     animation-duration: 3s;
     animation-timing-function: ease-in-out;
     @media (min-width: $breakpoint-sm) {
-   
     }
   }
 
@@ -61,41 +58,38 @@
     @include img();
   }
   &__container {
-    
     @include container();
   }
   &__bild-container {
     @include bild-container();
   }
-  &__title_flat-container{
+  &__title_flat-container {
     padding-right: 0.3rem;
   }
-  &__title{
-   
+  &__title {
     margin: 1rem auto;
     font-size: 1.5rem;
 
     @media (min-width: $breakpoint-xs) {
-    font-size: 3rem;
+      font-size: 3rem;
     }
   }
-  &__flat-text{
+  &__flat-text {
     display: inline-block;
     text-transform: uppercase;
     background-color: red;
     color: white;
-    font-size:0.8rem;
+    font-size: 0.8rem;
     padding: 0.5rem;
     margin-top: 1rem;
     @media (min-width: $breakpoint-xs) {
       font-size: 1.5rem;
-      }
-    &:hover{
-      background-color:rgb(211, 54, 54);
     }
-
+    &:hover {
+      background-color: rgb(211, 54, 54);
+    }
   }
-  &__button{
+  &__button {
     @include button();
   }
 }

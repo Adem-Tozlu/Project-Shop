@@ -14,10 +14,12 @@
        
         display: flex;
         justify-content: center;
+       
+        align-items: center;
         margin: auto;
         flex-wrap: wrap;
         max-width:65rem ;
-
+        min-height:100vh;
         gap: 0.1rem;
         position: relative;
 

@@ -4,86 +4,67 @@
   --color-secondary: #{$color-secondary};
 }
 
-.product{
+.product {
   font-size: 0.4rem;
- padding-bottom: 2rem;
+  padding-bottom: 2rem;
   display: flex;
   flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin:0 auto;
-        min-height: 100vh;
-      
-   
-      
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
 
-  
   &__main {
     @include main-container();
-    min-height: 100%;
-   
   }
 
-&__container{
-   @include container();
-  
+  &__container {
+    @include container();
   }
-  &__bild-container{
-   @include bild-container();
-   
+  &__bild-container {
+    @include bild-container();
   }
 
-  &__title{
-    padding:0.7rem 0.7rem 0 0;
+  &__title {
+    padding: 0.7rem 0.7rem 0 0;
     @media (min-width: $breakpoint-xs) {
- 
       font-size: 1.2rem;
     }
-
   }
-  &__price{
+  &__price {
     position: absolute;
-    bottom:4rem;
+    bottom: 4rem;
     right: 6.31rem;
     font-weight: bold;
     font-size: 1rem;
     @media (min-width: $breakpoint-xs) {
- 
       font-size: 1.3rem;
     }
   }
-  &__img{
+  &__img {
     @include img();
-    }
-  &__button{
+  }
+  &__button {
     @include button();
   }
 
   // Ab hier habe ich den Detailsbereich
-  &__description{
-    padding:0.7rem 0.7rem 0 0;
-font-size: 0.7rem;
-@media (min-width: $breakpoint-xs) {
- 
-  font-size: 0.9rem;
-}
-
+  &__description {
+    padding: 0.7rem 0.7rem 0 0;
+    font-size: 0.7rem;
+    @media (min-width: $breakpoint-xs) {
+      font-size: 0.9rem;
+    }
   }
 
-  &__back-icon{
+  &__back-icon {
     left: 0.5rem;
     top: 0.5rem;
     position: absolute;
     font-size: 1.5rem;
     border-radius: 1000px;
-    background-color:var(--color-secondary);
+    background-color: var(--color-secondary);
     border-style: none;
     cursor: pointer;
-    
-
-  
-}
-
-
-
+  }
 }

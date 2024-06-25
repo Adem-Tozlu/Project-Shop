@@ -17,7 +17,7 @@ export const imagesArray = [
     { name: "Vivo V9", images: '/images/Vivo/Vivo_V9.jpg' },
     { name: "Vivo X21", images: '/images/Vivo/Vivo_X21.png' },
     { name: "Oppo A57", images: '/images/Oppo/Oppo_A57.jpg' },
-    { name: "Oppo F19 Pro+", images: '/images/Oppo/Oppo_F19_Pro+.png' },
+    { name: "Oppo F19 Pro Plus", images:'/images/Oppo/Oppo_F19_Pro+.png'},
     { name: "Oppo K1", images: '/images/Oppo/Oppo_K1.webp' },
     { name: "Beats Flex Wireless Earphones", images: '/images/Accessories/Beats_Flex_Wireless_Earphones.jpg' },
     { name: "Selfie Lamp with iPhone", images: '/images/Accessories/Selfie_Lamp_with_iPhone.png' },
