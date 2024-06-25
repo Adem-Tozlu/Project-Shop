@@ -2,6 +2,7 @@
 
 .addlist {
   padding-bottom: 10rem;
+  
 
   @include main-container();
 
@@ -15,6 +16,11 @@
     align-items: center;
   }
   &__cart-empty-shop-now {
+    color: red;
+    @media (min-width: $breakpoint-md) {
+    color: black;
+    }
+
     cursor: pointer;
     &:hover {
       color: red;
@@ -39,10 +45,21 @@
   }
 
   &__text {
-    font-size: 0.9rem;
+    font-size: 0.4rem;
   }
   &__total-text {
-    font-size: 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: red;
+    background-color: #b22222;
+    width: max-content;
+    padding: 0.5rem 1rem;
+    border-radius: 1000px;
+    color: white;
+
+    @media (min-width: $breakpoint-sm) {
+      font-size: 1.1rem;
+    }
   }
 
   &__button {
