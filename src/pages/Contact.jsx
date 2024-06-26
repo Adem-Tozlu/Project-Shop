@@ -1,4 +1,4 @@
-import React from "react";
+
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -114,7 +114,9 @@ function Contact() {
             style={{ display: namefalse ? "none" : "" }}
             className="form__contact__error-message"
           >
-            Your name or password is incorrect
+            Your name or password is incorrect! <br />
+            note: adem tozlu
+
           </p>
           <p
             style={{ display: inputfield ? "none" : "" }}

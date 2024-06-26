@@ -1,4 +1,3 @@
-import React from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import { FaChevronRight, FaChevronUp } from "react-icons/fa";
 import { MdOutlineShoppingCart } from "react-icons/md";

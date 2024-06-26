@@ -1,4 +1,3 @@
-import React from "react";
 
 import { FetchAPIContext } from "../context/FetchAPI";
 import { CategoryContext } from "../context/Category";

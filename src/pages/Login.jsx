@@ -1,6 +1,5 @@
-import React from "react";
-import { useState, useEffect, useContext } from "react";
-import { useNavigate } from "react-router-dom";
+
+import { useState, useContext } from "react";
 import { FetchAPIContext } from "../context/FetchAPI";
 
 function Login() {
@@ -74,7 +73,8 @@ function Login() {
             style={{ display: namefalse ? "none" : "" }}
             className="form__contact__error-message"
           >
-            Your name or password is incorrect
+            Your name or password is incorrect!
+            note: adem tozlu
           </p>
           <p
             style={{ display: inputfield ? "none" : "" }}
