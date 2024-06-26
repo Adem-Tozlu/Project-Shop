@@ -50,7 +50,7 @@ function Login() {
     <main className="contact__main">
       {submit ? (
         <form onSubmit={handleSubmit} className="form">
-          <h1 className="form__headline">Login:</h1>
+          <h1 className="form__headline">Login</h1>
           <label htmlFor="name">Name</label>
           <input
             type="text"
@@ -60,7 +60,7 @@ function Login() {
             onChange={handleChange}
           />
 
-          <label htmlFor="password">Password:</label>
+          <label htmlFor="password">Password</label>
           <input
             type="password"
             id="password"

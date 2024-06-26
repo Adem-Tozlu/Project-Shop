@@ -91,7 +91,7 @@ function Contact() {
     <main className="contact__main">
       {submit ? (
         <form onSubmit={handleSubmit} className="form">
-          <h1 className="form__headline">Login:</h1>
+          <h1 className="form__headline">Login</h1>
           <label htmlFor="name">Name</label>
           <input
             type="text"
@@ -101,7 +101,7 @@ function Contact() {
             onChange={handleChange}
           />
 
-          <label htmlFor="password">Password:</label>
+          <label htmlFor="password">Password</label>
           <input
             type="password"
             id="password"
@@ -132,7 +132,7 @@ function Contact() {
       ) : submitmessage ? (
         <form onSubmit={handleSubmitMessage} className="form">
           <h2 className="form__headline">Your Message</h2>
-          <label htmlFor="email">Email:</label>
+          <label htmlFor="email">Email</label>
           <input
             type="email"
             id="email"
@@ -141,7 +141,7 @@ function Contact() {
             onChange={handleChange}
           />
 
-          <label htmlFor="message">Message:</label>
+          <label htmlFor="message">Message</label>
           <textarea
             id="message"
             name="message"
