@@ -1,5 +1,3 @@
-# Feedbackform
-
 # Project – Shop
 
 This project was created as part of the further education at DCI. 
@@ -63,7 +61,8 @@ It is a shop implemented as a single-page application (SPA) using React and vari
 
 ## Tools
  - Vite
-### What I have learned
+
+### What I learned
 
 
 By developing this shop, I have not only significantly expanded my React knowledge and skills, but also gained valuable practical experience in implementing complex web applications.

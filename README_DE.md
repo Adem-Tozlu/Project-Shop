@@ -1,5 +1,3 @@
-# Feedbackform
-
 # Project – Shop
 Dieses Projekt wurde im Rahmen der Weiterbildung bei der DCI erstellt. 
 Es handelt sich um einen Shop, der als Single-Page-Applikation (SPA) mit React und verschiedenen Hooks wie useState, useEffect, useNavigate und useContext implementiert wurde.
@@ -19,11 +17,11 @@ Es handelt sich um einen Shop, der als Single-Page-Applikation (SPA) mit React u
 - [Übersicht](#overview)
   - [Screenshot](#screenshot)
   - [Links](#links)
-- [Mein Prozess](#my-process)
-  - [Erstellt mit](#built-with)
+- [Mein Prozess](#mein-prozess)
+  - [Erstellt mit](#erstellt-mit)
   - [Frameworks](#frameworks)
   - [Tools](#tools)
-  - [Was ich gelernt habe](#what-i-learned)
+  - [Was ich gelernt habe](#was-ich-gelernt-habe)
 - [Author](#author)
 
 ## Überblick
@@ -39,7 +37,7 @@ Es handelt sich um einen Shop, der als Single-Page-Applikation (SPA) mit React u
 
 ## Mein Prozess
 
-### Gebaut mit
+### Erstellt mit
 
 - Semantic HTML5 markup
 - SASS/SCSS
