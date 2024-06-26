@@ -13,10 +13,18 @@ function NotPages() {
       } else {
         navigate("/");
       }
-    }, 1000);}, [timer]);
- 
+    }, 1000);
+  }, [timer]);
 
-  return <h2 className="notpages"><span>404:Not found! </span><div>Redirect to home in <span style={{ color: "red" }}>{timer}</span>  seconds</div> </h2>;
+  return (
+    <h2 className="notpages">
+      <span>404:Not found! </span>
+      <div>
+        Redirect to home in <span style={{ color: "red" }}>{timer}</span>{" "}
+        seconds
+      </div>{" "}
+    </h2>
+  );
 }
 
 export default NotPages;

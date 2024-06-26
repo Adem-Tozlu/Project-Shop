@@ -23,7 +23,7 @@ function Contact() {
       }, 1000);
       return () => clearTimeout(timer);
     }
-  }, [timer,submitmessage]);
+  }, [timer, submitmessage]);
 
   const [input, setInput] = useState({
     name: "",
@@ -31,7 +31,7 @@ function Contact() {
     email: "",
     message: "",
   });
-  console.log(input);
+
   function handleChange(event) {
     const { name, value } = event.target;
     setInput({ ...input, [name]: value });
@@ -87,8 +87,6 @@ function Contact() {
     }
   }
 
-  
-
   return (
     <main className="contact__main">
       {submit ? (
@@ -112,20 +110,26 @@ function Contact() {
             onChange={handleChange}
           />
 
-          <p style={{ display: namefalse ? "none" : "" }} className="form__contact__error-message">
+          <p
+            style={{ display: namefalse ? "none" : "" }}
+            className="form__contact__error-message"
+          >
             Your name or password is incorrect
           </p>
-          <p style={{ display: inputfield ? "none" : "" }} className="form__contact__error-message">
+          <p
+            style={{ display: inputfield ? "none" : "" }}
+            className="form__contact__error-message"
+          >
             please check your input fields
           </p>
 
           <button type="submit" className="form__contact-button">
-          Login 
+            Login
           </button>
         </form>
       ) : submitmessage ? (
         <form onSubmit={handleSubmitMessage} className="form">
-            <h2 className="form__headline">Your Message</h2>
+          <h2 className="form__headline">Your Message</h2>
           <label htmlFor="email">Email:</label>
           <input
             type="email"
@@ -142,13 +146,22 @@ function Contact() {
             value={input.message}
             onChange={handleChange}
           />
-          <p style={{ display: message ? "none" : "" }} className="form__contact__error-message">
+          <p
+            style={{ display: message ? "none" : "" }}
+            className="form__contact__error-message"
+          >
             Your message must be at least 5 lines long
           </p>
-          <p style={{ display: inputfield ? "none" : "" }} className="form__contact__error-message">
+          <p
+            style={{ display: inputfield ? "none" : "" }}
+            className="form__contact__error-message"
+          >
             please check your input fields
           </p>
-          <p style={{ display: emailCheck ? "none" : "" }} className="form__contact__error-message">
+          <p
+            style={{ display: emailCheck ? "none" : "" }}
+            className="form__contact__error-message"
+          >
             Please check your email address
           </p>
           <button type="submit" className="form__contact-button">

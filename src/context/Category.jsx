@@ -5,8 +5,6 @@ import { highlights } from "../components/highlights";
 
 export const CategoryContext = createContext();
 
-
-
 function Category({ children }) {
   const { products } = useContext(FetchAPIContext);
 
@@ -19,7 +17,8 @@ function Category({ children }) {
   const newHome = products.filter((product) => home.includes(product.title));
   const samsung = products.filter((product) => product.brand === "Samsung");
   const apple = products.filter(
-    (product) => product.brand === "Apple" && product.category === "smartphones");
+    (product) => product.brand === "Apple" && product.category === "smartphones"
+  );
   const realme = products.filter((product) => product.brand === "Realme");
   const vivo = products.filter((product) => product.brand === "Vivo");
   const oppo = products.filter((product) => product.brand === "Oppo");

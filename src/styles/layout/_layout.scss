@@ -1,10 +1,9 @@
 @use "../abstracts/" as *;
 @use "../base/" as *;
 
-:root{
+:root {
   --color-blue: #{$color-blue};
 }
-
 
 .navigation {
   display: flex;
@@ -15,7 +14,7 @@
   right: 0;
   bottom: 0rem;
   z-index: 1;
-  
+
   list-style-type: none;
 
   &__product__contact-product {
@@ -23,11 +22,11 @@
     list-style-type: none;
     position: absolute;
     right: 0;
-    
+
     @media (min-width: $breakpoint-md) {
       left: 20%;
       right: 20%;
-      height: 2rem;
+      height: 1.75rem;
       display: flex;
       justify-content: center;
       font-size: 1.5rem;
@@ -64,27 +63,23 @@
     }
   }
   &__products {
-    
     color: black;
     margin: 0 auto;
-    //background-color: white;
-   background-color: black;
-   
-  
-    
+    background-color: black;
+    background-image: url("/images/banner.jpg");
+
     padding: 1rem 2rem;
     border-bottom: 3px solid white;
     @media (min-width: $breakpoint-sm) {
       padding: 1rem 5rem;
     }
-    
+
     @media (min-width: $breakpoint-md) {
       border-bottom: none;
       padding: 0;
     }
   }
   &__product__text {
-   // border-radius: 6px;
     color: white;
     height: 0;
     list-style-type: none;
@@ -97,25 +92,20 @@
   }
 
   &__product-text {
-   
     padding: 0.3rem 2rem;
-    //border: 2px solid black;
-    color:white;
-    
+    color: white;
+
     @media (min-width: $breakpoint-md) {
       padding: 0 2rem;
-     // background-color:black;
-      background-color:transparent;
-      
+      background-color: transparent;
+
       color: white;
     }
   }
 
   &__product {
-    
-    
     background-color: var(--color-blue);
-    background-color: black;
+    background-image: url("/images/banner.jpg");
     width: 100%;
     border-bottom: 3px solid white;
     padding: 1rem 4.14rem;
@@ -124,19 +114,16 @@
     @media (min-width: $breakpoint-sm) {
       padding: 1rem 7.15rem;
     }
-    
+
     @media (min-width: $breakpoint-md) {
       border-bottom: none;
       background-color: white;
+      background-image: none;
       color: black;
       padding: 1rem 0.1rem;
     }
-
   }
   &__product--undertext {
-    
-    
-    //border-width: 3px;
     display: flex;
     justify-content: center;
     list-style-type: none;
@@ -154,7 +141,6 @@
     margin-left: 0.5rem;
     width: 0.8rem;
     height: 0.8rem;
-    
   }
 
   &__addList {
@@ -182,10 +168,9 @@
   }
 }
 .navigation__contact {
-  // position: relative;
- 
   display: inline-block;
   background-color: black;
+  background-image: url("/images/banner.jpg");
   color: white;
   width: 100%;
   padding: 1rem 0;
@@ -193,6 +178,7 @@
   border-bottom: 3px solid white;
   @media (min-width: $breakpoint-md) {
     padding: 0;
+    background-image: none;
     border-bottom: none;
     position: relative;
     width: max-content;

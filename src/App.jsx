@@ -5,9 +5,9 @@ import "./styles/complett/_index.scss";
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import FetchAPI from "./context/FetchAPI";
-import Footer from "./components/Footer";
+
 import Category from "./context/Category";
-import {Home, AddList, NotPages, Samsung, Apple, Realme, Vivo, Oppo,Accessories } from "./pages";
+import {Home, AddList, NotPages, Samsung, Apple, Realme, Vivo, Oppo,Accessories,Login } from "./pages";
 import Contact from "./pages/Contact";
 function App() {
   return (
@@ -26,6 +26,7 @@ function App() {
                 <Route path="/accessories" element={<Accessories />} />
                 <Route path="/contact" element={<Contact/>}/>
                 <Route path="/addlist" element={<AddList />} />
+                <Route path="/login" element={<Login/>}/>
               </Route>
               <Route path="*" element={<NotPages />} />
             </Routes>

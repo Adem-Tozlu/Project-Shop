@@ -1,8 +1,11 @@
 @use "../abstracts/" as *;
 
+:root {
+  --color-secondary: #{$color-secondary};
+}
+
 .addlist {
   padding-bottom: 10rem;
-  
 
   @include main-container();
 
@@ -18,7 +21,7 @@
   &__cart-empty-shop-now {
     color: red;
     @media (min-width: $breakpoint-md) {
-    color: black;
+      color: black;
     }
 
     cursor: pointer;
@@ -50,9 +53,7 @@
   &__total-text {
     font-size: 1rem;
     font-weight: bold;
-    background-color: red;
-    background-color: #b22222;
-    width: max-content;
+    background-color: var(--color-secondary);
     padding: 0.5rem 1rem;
     border-radius: 1000px;
     color: white;
@@ -66,22 +67,35 @@
     @include button();
   }
   &__buy--total {
-    display: inline-block;
-    align-items: center;
-    margin: 4rem 0 auto;
+    display: grid;
 
-    width: 100%;
+    flex-direction: column;
+    justify-content: end;
+    margin: 1.5rem 0 auto;
+    width: 80%;
+    text-align: end;
+    @media (min-width: $breakpoint-xs) {
+      max-width: 27rem;
+    }
+    @media (min-width: $breakpoint-sm) {
+      max-width: 34rem;
+    }
+    @media (min-width: $breakpoint-md) {
+      width: 92%;
+      max-width: 65rem;
+    }
   }
   &__button--buy {
     background-color: #4caf50;
     border: none;
     color: white;
-    padding: 15px 25px;
+    padding: 1rem 2rem;
     text-decoration: none;
-
-    font-size: 10px;
+    font-size: 0.8rem;
     font-weight: bold;
-    margin: 4px 2px;
+    //margin: 4px 2px;
+    margin-top: 0.5rem;
+    margin-right: 0;
     cursor: pointer;
     border-radius: 1000px;
   }

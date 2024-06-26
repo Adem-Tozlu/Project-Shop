@@ -21,8 +21,4 @@ export const imagesArray = [
     { name: "Oppo K1", images: '/images/Oppo/Oppo_K1.webp' },
     { name: "Beats Flex Wireless Earphones", images: '/images/Accessories/Beats_Flex_Wireless_Earphones.jpg' },
     { name: "Selfie Lamp with iPhone", images: '/images/Accessories/Selfie_Lamp_with_iPhone.png' },
-    { name: "Selfie Stick Monopod", images: '/images/Accessories/Selfie_Stick_Monopod.jpg' },
-  
-
-
-]
+    { name: "Selfie Stick Monopod", images: '/images/Accessories/Selfie_Stick_Monopod.jpg' },]

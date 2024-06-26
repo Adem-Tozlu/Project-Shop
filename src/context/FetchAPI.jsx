@@ -19,7 +19,6 @@ function FetchAPI({ children }) {
       })
       .catch((error) => {
         console.error("Fehler beim laden", error);
-        
       });
   }, []);
 
@@ -36,10 +35,21 @@ function FetchAPI({ children }) {
     return cart.reduce((total, item) => total + item.price, 0).toFixed(2);
   };
 
-  
+  const cartempty = () => {
+    return setCart([]);
+  };
+
   return (
     <FetchAPIContext.Provider
-      value={{ products, cart, numItem, addProduct, removeProduct, itemTotal }}
+      value={{
+        products,
+        cart,
+        numItem,
+        addProduct,
+        removeProduct,
+        itemTotal,
+        cartempty,
+      }}
     >
       {children}
     </FetchAPIContext.Provider>
