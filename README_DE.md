@@ -33,7 +33,7 @@ Es handelt sich um einen Shop, der als Single-Page-Applikation (SPA) mit React u
 ### Links
 
 - Solution URL: [Github Solutions](https://github.com/Adem-Tozlu/Project-Shop)
-- Live Site URL: [Website Feedbackform](https://project-shop-xi.vercel.app/)
+- Live Site URL: [Website Shop](https://project-shop-xi.vercel.app/)
 
 ## Mein Prozess
 

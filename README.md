@@ -38,7 +38,7 @@ It is a shop implemented as a single-page application (SPA) using React and vari
 ### Links
 
 - Solution URL: [Github Solutions](https://github.com/Adem-Tozlu/Project-Shop)
-- Live Site URL: [Website Feedbackform](https://project-shop-xi.vercel.app/)
+- Live Site URL: [Website Shop](https://project-shop-xi.vercel.app/)
 
 ## My process
 
