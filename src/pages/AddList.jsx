@@ -2,20 +2,28 @@
 import { FetchAPIContext } from "../context/FetchAPI";
 import { CategoryContext } from "../context/Category";
 import { useNavigate } from "react-router-dom";
+import { FaPlus } from "react-icons/fa";
+
+import { FaMinus } from "react-icons/fa6";
+
+import { IoTrashOutline } from "react-icons/io5";
+
 import { useContext } from "react";
 import { MdOutlineShoppingCart } from "react-icons/md";
 
 function AddList() {
-  const { cart, removeProduct, itemTotal } = useContext(FetchAPIContext);
+  const { cart, removeProduct,addProduct ,removeitem, itemTotal } = useContext(FetchAPIContext);
   const { getImages } = useContext(CategoryContext);
   const navigate = useNavigate();
+
+
 
   return (
     <main className="addlist">
       {cart && cart.length > 0 ? (
         <>
           {cart.map((product) => (
-            <div key={product.UUID}>
+            <div key={product.id}>
               <div className="addlist__container">
                 <div className="addlist__bild-container">
                   <img
@@ -32,8 +40,21 @@ function AddList() {
                     className="addlist__button"
                     onClick={() => removeProduct(product)}
                   >
-                    Remove
+                    <IoTrashOutline />
+
                   </button>
+                  <div className="addlist__product-count-container"><button className="addlist__product-count--button">
+                  <FaPlus 
+                    onClick={() => addProduct(product)} />
+
+                  </button>
+                  <span className="addlist__product-count">{product.count}</span>
+                  <button className="addlist__product-count--button">
+                  <FaMinus onClick={()=> removeitem(product)}/>
+
+                  </button>
+</div>
+                  
                 </div>
               </div>
             </div>

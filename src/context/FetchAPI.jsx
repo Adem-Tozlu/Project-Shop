@@ -5,11 +5,8 @@ export const FetchAPIContext = createContext();
 function FetchAPI({ children }) {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
-  let numItem = cart.length;
 
-  function randomID() {
-    return Math.floor(Math.random() * 1000);
-  }
+  let numItem = cart.length;
 
   useEffect(() => {
     fetch("https://dummyjson.com/products/search?q=phone")
@@ -22,17 +19,37 @@ function FetchAPI({ children }) {
       });
   }, []);
 
-  const addProduct = (product) => {
-    const productWithID = { ...product, UUID: randomID() };
-    setCart([...cart, productWithID]);
+  
+  const addProduct = (product) => { 
+    const ProductIndex = cart.findIndex(item => item.id === product.id);
+    if (ProductIndex !== -1) {
+    
+      const newCart = [...cart];
+    
+      newCart[ProductIndex].count += 1;
+      console.log(newCart);
+      setCart(newCart);
+    } else {
+     
+      const productWithID = { ...product, count: 1 };
+      setCart([...cart, productWithID]);
+    }
   };
 
   const removeProduct = (product) => {
-    setCart(cart.filter((item) => item.UUID !== product.UUID));
+    setCart(cart.filter((item) => item.id !== product.id));
+  };
+
+  const removeitem = (product) => {
+    const ProductIndex = cart.findIndex(item => item.id === product.id);
+    const newCart = [...cart];
+    if (newCart[ProductIndex].count > 1) {
+      newCart[ProductIndex].count -= 1;
+      setCart(newCart);}
   };
 
   const itemTotal = () => {
-    return cart.reduce((total, item) => total + item.price, 0).toFixed(2);
+    return cart.reduce((total, item) => total + (item.price * item.count), 0).toFixed(2);
   };
 
   const cartempty = () => {
@@ -49,6 +66,7 @@ function FetchAPI({ children }) {
         removeProduct,
         itemTotal,
         cartempty,
+        removeitem
       }}
     >
       {children}

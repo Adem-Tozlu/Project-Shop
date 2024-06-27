@@ -64,7 +64,47 @@
   }
 
   &__button {
-    @include button();
+    position: absolute;
+    bottom: 1.5rem;
+    right: 5.5rem;
+    background-color: transparent;
+    border: none;
+   
+    font-size: 1.3rem;
+    cursor: pointer;
+    display:flex;
+    color: var(--color-secondary);
+   
+  }
+  &__product-count-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   position: absolute;
+    bottom: 1.5rem;
+    right: 7.5rem;
+   
+  }
+  &__product-count{
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    padding: 0.1rem 0.5rem;
+    border-radius: 1000px;
+   margin: 0 0.5rem;
+    background-color: var(--color-secondary);
+  }
+  &__product-count--button {
+    display: flex;
+    background-color: transparent;
+    border: none;
+    color: var(--color-secondary);
+    text-decoration: none;
+    font-size: 1.2rem;
+    
+  
+    cursor: pointer;
+    border-radius: 0px;
   }
   &__buy--total {
     display: grid;
