@@ -152,7 +152,7 @@ function Contact() {
             style={{ display: message ? "none" : "" }}
             className="form__contact__error-message"
           >
-            Your message must be at least 5 lines long
+            Your message must be at least 5 characters long
           </p>
           <p
             style={{ display: inputfield ? "none" : "" }}
