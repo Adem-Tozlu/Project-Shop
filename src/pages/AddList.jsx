@@ -1,4 +1,3 @@
-
 import { FetchAPIContext } from "../context/FetchAPI";
 import { CategoryContext } from "../context/Category";
 import { useNavigate } from "react-router-dom";
@@ -12,11 +11,10 @@ import { useContext } from "react";
 import { MdOutlineShoppingCart } from "react-icons/md";
 
 function AddList() {
-  const { cart, removeProduct,addProduct ,removeitem, itemTotal } = useContext(FetchAPIContext);
+  const { cart, removeProduct, addProduct, removeitem, itemTotal } =
+    useContext(FetchAPIContext);
   const { getImages } = useContext(CategoryContext);
   const navigate = useNavigate();
-
-
 
   return (
     <main className="addlist">
@@ -41,20 +39,20 @@ function AddList() {
                     onClick={() => removeProduct(product)}
                   >
                     <IoTrashOutline />
-
                   </button>
-                  <div className="addlist__product-count-container"><button className="addlist__product-count--button">
-                  <FaPlus 
-                    onClick={() => addProduct(product)} />
-
-                  </button>
-                  <span className="addlist__product-count">{product.count}</span>
+                  <div className="addlist__product-count-container">
                   <button className="addlist__product-count--button">
-                  <FaMinus onClick={()=> removeitem(product)}/>
+                      <FaMinus onClick={() => removeitem(product)} />
+                    </button>
+                    <span className="addlist__product-count">
+                      {product.count}
+                    </span>
 
-                  </button>
-</div>
-                  
+                    <button className="addlist__product-count--button">
+                      <FaPlus onClick={() => addProduct(product)} />
+                    </button>
+                   
+                  </div>
                 </div>
               </div>
             </div>
