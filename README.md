@@ -1,7 +1,8 @@
 # Project – Shop
 
-This project was created as part of the further education at DCI. 
-It is a shop implemented as a single-page application (SPA) using React and various hooks such as useState, useEffect, useNavigate, and useContext.
+As part of a further education course at DCI, I designed and developed an online shop as a React Single-Page Application (SPA). This project was successfully presented as part of the final exam in the frontend area.
+
+This is a shop that is implemented as a Single-Page Application (SPA) using React and various hooks such as useState, useEffect, useNavigate, and useContext.
 
 ## Features
 
