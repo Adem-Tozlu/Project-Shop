@@ -72,4 +72,4 @@ These experiences will be beneficial to me in my further career as a developer.
 
 - Website - [Github](https://github.com/Adem-Tozlu)
 - Frontend Mentor – [@Adem-Tozlu](https://www.frontendmentor.io/profile/Adem-Tozlu)
-- Linkedin - [@Adem-Tozlu](https://www.linkedin.com/in/adem-tozlu-8906b52a5)
+- Linkedin - [@Adem-Tozlu](https://www.linkedin.com/in/adem-tozlu)
